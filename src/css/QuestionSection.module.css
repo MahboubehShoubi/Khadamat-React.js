@@ -1,0 +1,63 @@
+.container{
+    background-color: var(--background-white-gray);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 50px 0 50px;
+}
+
+.topSection{
+    text-align: center;
+    line-height: 40px;
+}
+
+.topSection h4{
+    font-size: 13px;
+    color: var(--gray-4);
+    letter-spacing: 5px;
+}
+
+.topSection p{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+/*-------bottomSection------*/
+.bottomSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 40px;
+    width: 100%;
+}
+
+
+.bottomLeft img{
+    margin-top: -50px;
+}
+
+.bottomRightForm{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.bottomRightForm input ,.bottomRightForm select , .bottomRightForm button{
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.submitBtn{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+

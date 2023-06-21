@@ -1,0 +1,61 @@
+.container{
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+.backgroundImage{
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(10%);
+}
+
+.textTop{
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+    line-height: 70px;
+}
+
+.textTop h2{
+    color: var(--gray-3);
+    font-size: 15px;
+    letter-spacing: 6px;
+}
+
+.textTop p{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    row-gap: 50px;
+    padding: 50px;
+}
+
+.Box{
+    width: 250px;
+}
+.Image img{
+    width: 60px;
+}
+
+.Description :nth-child(1){
+     color: var(--gray-2);
+    font-size:1.5rem;
+    font-weight: bold;
+ }
+
+.Description :nth-child(2){
+    color: white;
+    font-size:1.5rem;
+    font-weight: bold;
+}

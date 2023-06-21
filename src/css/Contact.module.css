@@ -1,0 +1,140 @@
+/*---------------- Address MAP ---------*/
+
+/*------ BOX Address --------*/
+.AddressMap{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.boxAddress{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    padding:0 50px;
+    justify-content: center;
+}
+
+.boxAddress h3{
+    font-size: 1.8rem;
+}
+
+.boxAddress  {
+    font-size: 17px;
+}
+
+.boxEmail{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5px;
+    align-items: flex-end;
+    width: 150px;
+}
+
+.icofontEmail{
+    width: 20px;
+}
+
+.informationCompany , .boxAddress span {
+    color: var(--gray-3);
+}
+
+.callTel{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: bold;
+}
+
+.socialMedia ul{
+    display: flex;
+    list-style: none;
+    column-gap: 40px;
+}
+
+.IconContact{
+    width: 20px;
+}
+
+/*------ BOX MAP -----*/
+.boxMap{
+    width: 50%;
+    height: inherit;
+    overflow: hidden;
+}
+
+.boxMap img{
+    width:33%;
+    height:fit-content;
+}
+
+/*------------------ BOX MESSAGE ------------*/
+
+.boxMessage{
+    width: 100%;
+    background-color: var(--background-gray);
+    padding: 100px 50px;
+    display: flex;
+    /*justify-content: center;*/
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.boxMessage p{
+    color: var(--gray-3);
+}
+
+.boxMessage h1{
+    font-size: 2.8rem;
+    color: black;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+form section{
+    display: flex;
+    width: 100%;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+
+form input{
+    width: 350px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    color: var(--gray-3);
+}
+
+form textarea{
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    color: var(--gray-3);
+}
+
+form button{
+    background-color: black;
+    color: white;
+    padding:13px 25px;
+    display: flex;
+    column-gap: 10px;
+    transition: all 1s;
+    border: none;
+}
+
+form button:hover{
+    background-color: var(--orange);
+    cursor: pointer;
+}

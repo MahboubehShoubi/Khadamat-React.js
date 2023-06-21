@@ -1,0 +1,76 @@
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    padding: 50px;
+}
+
+.boxLeft{
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+
+.imgBottom img{
+    width: 400px;
+    height: 550px;
+    object-fit:cover;
+    object-position: right;
+}
+
+.imgTop{
+    z-index: 3;
+    left: 280px;
+    bottom: 50px;
+    position: absolute;
+}
+.imgTop img{
+    width: 190px;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+    outline: 8px solid white;
+}
+
+/*-------- boxRight -----*/
+.boxRight{
+    width: 60%;
+}
+
+.boxRight{
+    padding:20px;
+}
+
+.boxRight img{
+    width: 80%;
+}
+
+.boxRight p{
+    color: var(--gray-4);
+    line-height: 25px;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.counters{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.counter{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+.counter :nth-child(1){
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.counter :nth-child(2){
+    color: var(--gray-3);
+    font-size: 15px;
+}

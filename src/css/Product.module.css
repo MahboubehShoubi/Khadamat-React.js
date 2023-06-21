@@ -1,0 +1,80 @@
+.productBox{
+    width: 30%;
+    padding: 20px;
+    box-shadow: 10px 10px 29px 4px rgba(133,130,130,0.76);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.imgProduct{
+    width: 100%;
+    height:300px;
+}
+
+.productHandler{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.productHandler a{
+    font-size: 15px;
+    border: 2px solid var(--orange);
+    text-decoration: none;
+    padding:5px 15px;
+    color: black;
+    background-color: var(--orange);
+    transition: all 1s;
+}
+
+.productHandler a:hover{
+    background-color: inherit;
+    color: black;
+    border: 2px solid var(--orange);
+}
+
+.btnHandler{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.btnHandler button{
+    font-size: 15px;
+    width: fit-content;
+    padding:5px 15px;
+}
+
+.btnDecrease{
+    background-color: #d7d723;
+    border: 2px solid #d7d723;
+}
+
+.delProduct{
+    background-color: #f64b4b;
+    border: 2px solid #f64b4b;
+}
+.delProduct img{
+    width: 13px;
+}
+
+.btnIncrease{
+    background-color: #8FBC32;
+    border: 2px solid #8FBC32 ;
+}
+
+.addProduct{
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    transition: all 1s;
+}
+
+.addProduct:hover{
+    background-color: inherit;
+    color: black;
+    border: 2px solid black;
+}
