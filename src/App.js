@@ -10,6 +10,7 @@ import Store from './components/Store';
 import ProductDetail from "./components/ProductDetail";
 import Navbar from './components/Navbar';
 import ShopCart from './components/ShopCart';
+import Works from "./components/Works";
 
 //Context
 import ProductContextProvider from './context/ProductContextProvider';
@@ -30,6 +31,7 @@ function App() {
                     <Route path='/cart' element={<ShopCart />} />
                     <Route path='/products' element={<Store />} />
                     <Route path='/products/:id' element={<ProductDetail />} />
+                    <Route path='/project' element={<Works />} />
                 </Routes>
             </CartContextProvider>
         </ProductContextProvider>
