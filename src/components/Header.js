@@ -1,12 +1,20 @@
-import React from 'react';
+import React , { useState } from 'react';
 import { Link } from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import Form from 'react-bootstrap/Form';
+
 
 //CSS
 import Styles from "../css/Header.module.css";
 
-//Imags
+//Imag
 import  Logo from "../image/logo/logo-khadamat.png";
 import Slider1 from "../image/background-Image/home-slide-1.jpg";
+import modalImg from "../image/Images/carpentar-man.png";
 
 //Icons
 import FindUs from "../assets/icons/map.svg";
@@ -17,11 +25,15 @@ import Shop from "../assets/icons/shop.svg";
 
 
 const Header = () => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     return (
         <div>
-            <header>
-                <section className={Styles.header}>
-
+            <Container>
+                <Row className={Styles.header}>
 
                     <section className={Styles.communication}>
 
@@ -63,10 +75,40 @@ const Header = () => {
 
                     </section>
 
-                    <section className={Styles.getQuote}>
+                    <section className={Styles.getQuote} onClick={handleShow}>
                         <a href="#">Get A Quote</a>
                     </section>
-                </section>
+                </Row>
+
+                <Modal className={Styles.modalBox} show={show} onHide={handleClose}>
+                    <Modal.Header closeButton className={Styles.modalHeader}>
+                        <section>
+                            <img src={modalImg} alt="modalImag"/>
+                        </section>
+                        <section>
+                            <Modal.Title>GET A QUOTE</Modal.Title>
+                            <p>Apparently we had reached a great height in the atmosphere,
+                                for the sky was a dead black, and the stars had ceased to twinkle.
+                                By the same illusion which lifts the horizon of the sea to the level
+                                of lopms kiner the spectator on a hill side.
+                            </p>
+                        </section>
+                    </Modal.Header>
+
+                    <Modal.Body>
+                        <Form>
+                            <Form.Control type="text" placeholder="Your Name *" autoFocus/>
+                            <Form.Control type="email" placeholder="name@example.com" />
+                            <Form.Control type="tel" placeholder="Your Phone Number *" />
+                            <Form.Control as="textarea" rows={3} placeholder="Your Subject" />
+                        </Form>
+                    </Modal.Body>
+
+                    <Modal.Footer>
+                        <Button variant="secondary" onClick={handleClose}>Close</Button>
+                        <Button variant="primary" onClick={handleClose}>Submit Now</Button>
+                    </Modal.Footer>
+                </Modal>
 
     {/* ----------------------------- Navbar----------------------------- */}
 
@@ -115,7 +157,7 @@ const Header = () => {
                     </section>
 
                 </section>
-            </header>
+            </Container>
 
 
         </div>

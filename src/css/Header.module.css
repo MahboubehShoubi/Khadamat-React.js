@@ -62,6 +62,21 @@ header{
     color: white;
 }
 
+/*------------- Modal Box -------*/
+.modalHeader{
+    display: flex;
+    column-gap: 15px;
+}
+
+.modalHeader img{
+    width: 100px;
+}
+
+.modalHeader p{
+    font-size: 10px;
+    line-height: 16px;
+}
+
 /*----------------------- NAVBAR ------------------*/
 .navbar{
     width: 100%;

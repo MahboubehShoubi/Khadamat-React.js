@@ -59,6 +59,22 @@
     color: white;
 }
 
+/*------------- Modal Box -------*/
+
+.modalHeader{
+    display: flex;
+    column-gap: 15px;
+}
+
+.modalHeader img{
+    width: 100px;
+}
+
+.modalHeader p{
+    font-size: 10px;
+    line-height: 16px;
+}
+
 /*----------------------- NAVBAR ------------------*/
 .navbar{
     width: 90%;
@@ -153,7 +169,7 @@
 
 /*------ Media -----*/
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
     /*----- header Top -----*/
     .header{
         padding: 20px 10px;
@@ -189,6 +205,14 @@
     .getQuote a{
         padding: 5px 10px;
         font-size: 10px;
+    }
+
+    .modalBox{
+        width: 90%;
+    }
+
+    .modalHeader img{
+       display: none;
     }
 
     .logo2{
