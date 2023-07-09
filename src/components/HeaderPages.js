@@ -130,12 +130,10 @@ const HeaderPages = (props) => {
                 <Navbar expand="md">
                     <Container className={Styles.navbar}>
                         <Navbar.Brand  className={Styles.logo2}>
-                            <Link to='/'>
-                                <img src={Logo2}/>
-                            </Link>
+                            <Link to='/'><img src={Logo2}/></Link>
                         </Navbar.Brand>
-                        <Navbar.Toggle aria-controls="basic-navbar-nav" className={Styles.hamburgerMenu}/>
-                        <Navbar.Collapse id="basic-navbar-nav" className={Styles.navCollapse}>
+                        <Navbar.Toggle aria-controls="navbar-nav" className={Styles.hamburgerMenu}/>
+                        <Navbar.Collapse id="navbar-nav" className={Styles.navCollapse}>
                             <section className={Styles.navLeft}>
                                 <ul>
                                     <li><Link to="/">Home</Link></li>

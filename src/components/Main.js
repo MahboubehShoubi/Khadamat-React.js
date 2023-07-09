@@ -22,11 +22,11 @@ const Main = () => {
     return (
         <div>
             <Header />
-            <SuccessWorks />
-            <OurServices />
-            <OurTeam />
-            <QuestionSection />
-            <Footer />
+            {/*<SuccessWorks />*/}
+            {/*<OurServices />*/}
+            {/*<OurTeam />*/}
+            {/*<QuestionSection />*/}
+            {/*<Footer />*/}
         </div>
     );
 };

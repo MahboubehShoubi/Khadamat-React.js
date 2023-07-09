@@ -1,6 +1,6 @@
-header{
+.container{
     position: relative;
-}
+    }
 .header{
     width: 100%;
     display: flex;
@@ -11,13 +11,8 @@ header{
 
 .communication{
     display: flex;
-    justify-content: space-around;
-    column-gap: 50px;
-    width: 70%;
-}
-
-.logo img{
-    width: 150px;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
@@ -76,28 +71,52 @@ header{
     font-size: 10px;
     line-height: 16px;
 }
-
-/*----------------------- NAVBAR ------------------*/
+/*---------------- NAVBAR --------------*/
 .navbar{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     background-color: var(--black-2);
+    padding: 20px 100px;
+}
+
+.logo img{
+    width: 150px;
+    margin-top: -30px;
+}
+
+.navCollapseBox{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 50px;
+    column-gap: 50px;
+}
+
+.navCollapse{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 0 auto;
 }
 
 .navLeft ul , .navRight ul{
     display: flex;
     list-style: none;
     column-gap: 40px;
-
+    padding: 0;
+    margin: 0;
 }
 
 .navLeft a{
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+
+.navLeft a:hover{
+    color: var(--orange);
 }
 
 
@@ -114,13 +133,12 @@ header{
 
 .headerMain{
     width: 100%;
-    height: 95vh;
+    height: 60vh;
     background-position:bottom;
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: column;
-    /*position: relative;*/
     row-gap: 2rem;
 }
 
@@ -164,9 +182,9 @@ header{
 
 .headerMainButton{
    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-   column-gap: 20px;
+    column-gap: 20px;
 }
 
 .ourStory{
@@ -194,4 +212,163 @@ header{
 .contact:hover{
     color:var(--orange);
     background-color:inherit;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .header{
+        padding: 10px 20px;
+        row-gap: 10px;
+        align-items: flex-start;
+    }
+    .communication{
+        align-items: flex-start;
+    }
+
+    .item1 , .item2 {
+        align-items: flex-start;
+    }
+
+    .icofontEmail , .icofontMap{
+        width: 15px;
+    }
+
+    .itemRightText{
+        font-size: 10px;
+    }
+
+    .itemRightText :nth-child(1) ,
+    .itemRightText :nth-child(2){
+        font-size: 8px;
+    }
+    .item3 {
+        display: none;
+    }
+
+    .getQuote a{
+        padding: 5px 30px;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+    .modalBox{
+        width: 70%;
+        height: 80vh;
+        margin-left: 15%;
+    }
+
+
+    .modalHeader{
+        padding: 10px 20px;
+    }
+    .modalHeader img{
+       display: none;
+    }
+
+    .modalForm{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    .inputForm{
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .btnModal{
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    /*--------- Navbar --------*/
+
+    .navbar{
+        padding: 10px;
+
+    }
+
+    .logo img{
+        width: 120px;
+    }
+
+    .navCollapseBox{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content:space-around;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    .hamburgerMenu{
+        background-color: white;
+        padding: 5px;
+        margin: 10px 0;
+    }
+
+    .navCollapse{
+        z-index: 999;
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        right: 13px;
+        padding: 20px;
+        background-color: var(--black-1);
+        border: 3px solid white;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+    }
+
+    .navLeft ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navLeft a {
+        font-size: 10px;
+    }
+
+    .navRight ul{
+        column-gap: 10px;
+    }
+    .navRight img{
+        width: 18px;
+    }
+
+/*----------- Main Header ------*/
+
+    .headerMain{
+        row-gap: 1rem;
+        width: 100%;
+    }
+    .headerMain img{
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .headerMainTop{
+        row-gap: 14px;
+    }
+
+    .headerMainTop :nth-child(1)
+    ,.headerMainTop :nth-child(1) span{
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .headerMainTop :nth-child(2){
+        letter-spacing: 4px;
+        font-size: 10px;
+    }
+
+    .headerMainButton{
+        column-gap: 10px;
+    }
+
+    .ourStory , .contact{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
 }
