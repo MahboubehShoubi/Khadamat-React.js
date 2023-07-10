@@ -3,12 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 30px;
     padding: 50px;
 }
 
 .boxLeft{
-    width: 40%;
     display: flex;
     position: relative;
 }
@@ -36,9 +34,6 @@
 }
 
 /*-------- boxRight -----*/
-.boxRight{
-    width: 60%;
-}
 
 .boxRight{
     padding:20px;
@@ -73,4 +68,46 @@
 .counter :nth-child(2){
     color: var(--gray-3);
     font-size: 15px;
+}
+
+@media only screen and (max-width: 576px) {
+    .container{
+        padding: 20px;
+    }
+
+    .imgTop{
+        left: 20%;
+        bottom: -60px;
+    }
+    .imgTop img{
+        width: 80%;
+        height: 200px;
+    }
+
+    /*-------- boxRight -----*/
+
+    .boxRight{
+        margin-top: 60px;
+        padding:20px;
+    }
+
+    .boxRight img{
+        width: 80%;
+    }
+
+    .boxRight p{
+        font-size: 12px;
+        margin-top: 15px;
+    }
+
+    .counter{
+        row-gap: 8px;
+    }
+    .counter :nth-child(1){
+        font-size: 1.2rem;
+    }
+
+    .counter :nth-child(2){
+        font-size: 12px;
+    }
 }
