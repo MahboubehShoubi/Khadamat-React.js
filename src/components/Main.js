@@ -26,7 +26,7 @@ const Main = () => {
             {/*<OurServices />*/}
             {/*<OurTeam />*/}
             {/*<QuestionSection />*/}
-            {/*<Footer />*/}
+            <Footer />
         </div>
     );
 };
