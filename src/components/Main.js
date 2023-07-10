@@ -23,7 +23,7 @@ const Main = () => {
         <div>
             <Header />
             <SuccessWorks />
-            {/*<OurServices />*/}
+            <OurServices />
             {/*<OurTeam />*/}
             {/*<QuestionSection />*/}
             <Footer />

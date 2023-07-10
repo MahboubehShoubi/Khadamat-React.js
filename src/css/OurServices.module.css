@@ -1,12 +1,14 @@
 .container{
-    width: 100%;
     position: relative;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    height: auto;
 }
 
 .backgroundImage{
     width: 100%;
-    height: inherit;
+    height: 100%;
     position: absolute;
     z-index: -1;
     filter: brightness(10%);
@@ -14,9 +16,8 @@
 
 .textTop{
     text-align: center;
-    width: 100%;
-    padding-top: 100px;
     line-height: 70px;
+    margin-top: 80px;
 }
 
 .textTop h2{
@@ -32,24 +33,21 @@
 }
 
 .bottom{
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
     row-gap: 50px;
-    padding: 50px;
+    padding: 50px 100px;
 }
 
-.Box{
-    width: 250px;
-}
 .Image img{
     width: 60px;
 }
 
 .Description :nth-child(1){
-     color: var(--gray-2);
+    color: var(--gray-2);
     font-size:1.5rem;
     font-weight: bold;
  }
@@ -58,4 +56,38 @@
     color: white;
     font-size:1.5rem;
     font-weight: bold;
+}
+
+/*----------- media max-width: 576px -----*/
+@media only screen and (max-width: 576px) {
+
+    .textTop{
+        line-height: 80px;
+    }
+
+    .textTop h2{
+        font-size: 12px;
+        letter-spacing: 5px;
+    }
+
+    .textTop p{
+        font-size: 1.7rem;
+    }
+
+    .bottom{
+        row-gap: 30px;
+        padding: 30px 50px;
+    }
+
+    .Image img{
+        width: 30px;
+    }
+
+    .Description :nth-child(1){
+        font-size:1rem;
+    }
+
+    .Description :nth-child(2){
+        font-size:1rem;
+    }
 }

@@ -73,7 +73,7 @@ const SuccessWorks = () => {
 
                             <Col xs={6} sm={6} md={3} lg={3} className={Styles.counter}>
                                 <span className={Styles.awards} name="awards">
-                                    <CountUp end={26} duration={5}/>
+                                    <CountUp end={26} duration={7}/>
                                 </span>
                                 <span>AWARDS</span>
                             </Col>
