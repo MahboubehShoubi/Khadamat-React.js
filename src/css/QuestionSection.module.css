@@ -1,6 +1,5 @@
 .container{
     background-color: var(--background-white-gray);
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,11 +26,10 @@
 
 /*-------bottomSection------*/
 .bottomSection{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    column-gap: 40px;
-    width: 100%;
 }
 
 
@@ -40,9 +38,10 @@
 }
 
 .bottomRightForm{
-    width: 70%;
     display: flex;
     flex-direction: column;
+    row-gap: 40px;
+    height: max-content;
 }
 
 
@@ -50,14 +49,50 @@
     width: 100%;
     padding: 12px;
     font-size: 15px;
-    margin-bottom: 20px;
     border: none;
+    border-radius: 8px;
 }
 
 .submitBtn{
     background-color: black;
     color: white;
-    text-align: center;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 576px) {
+
+    .container{
+        padding: 50px 30px 30px ;
+        position: relative;
+        background: none;
+    }
+
+    .bottomLeft img{
+        position: absolute;
+        opacity: 10%;
+        margin-top: 20px;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .bottomRightForm{
+        row-gap: 20px;
+    }
+
+    .bottomRightForm input ,.bottomRightForm select {
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        background: none ;
+        border: 1px solid var(--gray);
+    }
+
+    .bottomRightForm button{
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+    }
+
 }
 
 
