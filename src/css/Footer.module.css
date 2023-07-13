@@ -163,5 +163,47 @@
     .footerItem3 , .footerItem4{
         margin-top: 28px;
     }
+
+    .footerItemHeader{
+        font-size: 1rem;
+    }
+
+    .footerItem1 p{
+        font-size: 12px;
+    }
+
+    /*------- Item2 --------*/
+
+    .footerItem2Box{
+        row-gap: 8px;
+    }
+
+    .footerItem2 img{
+        width: 1rem;
+    }
+
+    .footerItem2 a{
+        font-size: 12px;
+    }
+
+    /*------- Item 3 ------------*/
+
+    .footerItem3Box{
+        row-gap: 5px;
+    }
+
+    .footerItem3 a{
+        font-size: 12px;
+    }
+
+    .footerItem3 img{
+        width: 12px;
+    }
+    /*------- Item 4---------*/
+    .footerItem4 img{
+        width:200px;
+    }
+
+
 }
 
