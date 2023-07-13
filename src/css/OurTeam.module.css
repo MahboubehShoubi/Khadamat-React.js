@@ -1,6 +1,5 @@
 .container{
     background-color: var(--orange);
-    width: 100%;
     padding:100px 65px;
 }
 
@@ -22,37 +21,41 @@
     font-weight: bold;
 }
 
-.right{
+
+.userContainer{
+    background-color: whitesmoke;
+    padding: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items:center;
-    column-gap: 15px;
-}
-
-.right a{
-    display: flex;
-    align-items: end;
-    text-decoration: none;
-    color:white ;
-}
-
-.right a:hover{
-    color: black;
-    cursor: pointer;
-}
-
-.right a img{
-    width: 50px;
-}
-.right a img:hover{
-    fill: black;
-}
-
-.bottom{
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
     align-items: center;
-    flex-wrap: nowrap;
-    column-gap: 50px;
+    text-align: center;
     margin-top: 100px;
+}
+
+.userImage {
+    width: 80px;
+    margin-top: -80px;
+}
+
+.userDescription{
+    font-size: 15px;
+    color: var(--gray-3);
+    line-height: 20px;
+}
+
+.userName{
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 576px){
+    .container{
+        padding:50px 30px;
+    }
+
+    .userContainer{
+          width: 70%;
+      }
+
 }

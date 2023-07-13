@@ -1,15 +1,19 @@
-import React , { useState , useEffect , useReducer } from 'react';
-import Slider from "react-slick";
+import React , { useState , useEffect , useRef} from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination , Autoplay ,Navigation } from 'swiper/swiper.esm.js';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
-//Component
-import User from "./User";
 
 //CSS
 import Styles from "../css/OurTeam.module.css";
+import 'swiper/swiper.min.css';
+import 'swiper/modules/effect-coverflow/effect-coverflow.min.css';
+import 'swiper/modules/pagination/pagination.min.css';
+import 'swiper/modules/navigation/navigation.min.css';
 
-//Icons
-import prevIcon from "../assets/icons/thin-left.svg";
-import nextIcon from "../assets/icons/thin-right.svg";
+
 
 //Object
 import { Users } from "./share/userInformation";
@@ -25,54 +29,75 @@ const OurTeam = () => {
     } , []);
 
 
-    // let imgIndex = 0
-    // const prevHandler = () => {
-    //     imgIndex--
-    //     if (imgIndex < 0) {
-    //         imgIndex = Users.length - 1
-    //     }
-    //     setState(Users);
-    // }
-    //
-    // const nextHandler = () => {
-    //     imgIndex++
-    //     if (imgIndex > Users.length) {
-    //         imgIndex = 0 ;
-    //     }
-    //     setState(Users);
-    // }
-
-
 
     return (
         <div>
-            <section className={Styles.container}>
+            <Container fluid>
+                <section className={Styles.container}>
 
-                <section className={Styles.top}>
-                    <section className={Styles.left}>
-                        <h4>FROM OUR CLIENT</h4>
-                        <p>Testimonials</p>
-                    </section>
-                    {/*<section className={Styles.right}>*/}
-                    {/*    <a >*/}
-                    {/*        <img src={prevIcon} alt="prev"/>*/}
-                    {/*        <span>PREV</span>*/}
-                    {/*    </a>*/}
-                    {/*    <a >*/}
-                    {/*        <span>NEXT</span>*/}
-                    {/*        <img src={nextIcon} alt="next"/>*/}
-                    {/*    </a>*/}
+                    <Row className={Styles.top}>
+                        <Col className={Styles.left}>
+                            <h4>FROM OUR CLIENT</h4>
+                            <p>Testimonials</p>
+                        </Col>
+                    </Row>
 
-                    {/*</section>*/}
+                    <Swiper
+                        spaceBetween={80}
+                        slidesPerView={1}
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        coverflowEffect={{
+                            rotate: 50,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true,
+                        }}
+                        loop={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+
+                        breakpoints={{
+                            576: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 2,
+                                spaceBetween: 40,
+                            },
+                            1024: {
+                                slidesPerView: 3,
+                                spaceBetween: 50,
+                            },
+                        }}
+                        modules={[EffectCoverflow, Pagination,Autoplay,Navigation]}
+                        className={Styles.mySwiper}
+                    >
+
+                        {state.map(user => <SwiperSlide  key={user.id} className={Styles.userContainer}>
+                            <img className={Styles.userImage} src={user.image} alt="userImage"/>
+                            <p className={Styles.userDescription}>{user.description}</p>
+                            <span className={Styles.userName}>{user.name}</span>
+                        </SwiperSlide>)}
+                    </Swiper>
+
                 </section>
-
-                <section className={Styles.bottom}>
-                        {state.map(user => <User key={user.id} userData={user} />)}
-                </section>
-
-            </section>
+            </Container>
         </div>
     );
 };
+
+
+
+
 
 export default OurTeam;
