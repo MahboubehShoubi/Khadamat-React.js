@@ -1,7 +1,6 @@
 import React , { useState } from 'react';
 import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container";
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -24,7 +23,7 @@ import Email from "../assets/icons/email.svg";
 import Call from "../assets/icons/ui-call.svg";
 import Search from "../assets/icons/search.svg";
 import Shop from "../assets/icons/shop.svg";
-import {NavbarBrand} from "react-bootstrap";
+import CaretDown from "../assets/icons/caret-down.svg";
 
 
 const Header = () => {
@@ -123,20 +122,24 @@ const Header = () => {
                             <Col xs={{ span: 3, offset: 5 }} sm={{ span: 3, offset: 5 }} md={{ span:9, offset: 0}} lg={{ span:9, offset: 0 }} className={Styles.navCollapseBox}>
                                 <Navbar.Toggle aria-controls="navbar-nav" className={Styles.hamburgerMenu}/>
                                 <Navbar.Collapse id="navbar-nav" className={Styles.navCollapse}>
-                                    <section className={Styles.navLeft}>
-                                        <ul>
-                                            <li><Link to="/">Home</Link></li>
-                                            <li><Link to="/about">About</Link></li>
-                                            <li><a href="#">Services</a></li>
-                                            <li><Link to="/project">Works</Link></li>
-                                            <li><Link to="/products">Shop</Link></li>
-                                            <li><a href="#">Pages</a></li>
-                                            <li><Link to="/contact">Contact</Link></li>
+                                        <ul className={Styles.navLeft}>
+                                            <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                                            <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                                            <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                                                <ul className={Styles.subMenu}>
+                                                    <li className={Styles.subItem}><Link>Service 01</Link></li>
+                                                    <li className={Styles.subItem}><Link>Service 02</Link></li>
+                                                    <li className={Styles.subItem}><Link>Service 03</Link></li>
+                                                    <li className={Styles.subItem}><Link>Single Service</Link></li>
+                                                </ul>
+                                            </li>
+                                            <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                                            <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                                            <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
                                         </ul>
-                                    </section>
                                 </Navbar.Collapse>
-                                <section className={Styles.navRight}>
-                                    <ul>
+                                <section >
+                                    <ul className={Styles.navRight}>
                                         <li><a href="#"><img src={Shop} /></a></li>
                                         <li><a href="#"><img src={Search}/></a></li>
                                     </ul>
@@ -154,7 +157,7 @@ const Header = () => {
                         </Col>
 
                         <Col xs={6} sm={6} md={4} lg={4} className={Styles.headerMainButton}>
-                            <Link to="/ourstory" className={Styles.ourStory}>Our Story</Link>
+                            <Link to="/about" className={Styles.ourStory}>Our Story</Link>
                             <Link to="/contact" className={Styles.contact}>Contact Us</Link>
                         </Col>
                     </Row>

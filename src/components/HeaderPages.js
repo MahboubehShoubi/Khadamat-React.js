@@ -27,6 +27,7 @@ import GooglePlus from "../assets/icons/google-plus.svg";
 import Search from "../assets/icons/search.svg";
 import Home from "../assets/icons/home.svg";
 import modalImg from "../image/Images/carpentar-man.png";
+import CaretDown from "../assets/icons/caret-down.svg";
 
 const HeaderPages = (props) => {
     const {part1 , part2 , part3} = props;
@@ -43,8 +44,7 @@ const HeaderPages = (props) => {
                 <Container fluid>
                     <Row className={Styles.header}>
                         <Col md={2} lg={2} className={Styles.logo}>
-                            <a href="../../index.html">
-                                <img src={Logo} /></a>
+                            <Link to="/"><img src={Logo} /></Link>
                         </Col>
 
                         <Col xs={9} sm={9} md={8} lg={8}>
@@ -135,14 +135,20 @@ const HeaderPages = (props) => {
                         <Navbar.Toggle aria-controls="navbar-nav" className={Styles.hamburgerMenu}/>
                         <Navbar.Collapse id="navbar-nav" className={Styles.navCollapse}>
                             <section className={Styles.navLeft}>
-                                <ul>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/about">About</Link></li>
-                                    <li><a href="#">Services</a></li>
-                                    <li><Link to="/project">Works</Link></li>
-                                    <li><Link to="/products">Shop</Link></li>
-                                    <li><a href="#">Pages</a></li>
-                                    <li><Link to="/contact">Contact</Link></li>
+                                <ul className={Styles.navLeftMenu}>
+                                    <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                                    <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                                    <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                                        <ul className={Styles.subMenu}>
+                                            <li className={Styles.subItem}><Link>Service 01</Link></li>
+                                            <li className={Styles.subItem}><Link>Service 02</Link></li>
+                                            <li className={Styles.subItem}><Link>Service 03</Link></li>
+                                            <li className={Styles.subItem}><Link>Single Service</Link></li>
+                                        </ul>
+                                    </li>
+                                    <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                                    <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                                    <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
                                 </ul>
                             </section>
 
