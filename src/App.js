@@ -11,10 +11,13 @@ import ProductDetail from "./components/ProductDetail";
 import Navbar from './components/Navbar';
 import ShopCart from './components/ShopCart';
 import Works from "./components/Works";
+import Service1 from "./components/Service1";
 
 //Context
 import ProductContextProvider from './context/ProductContextProvider';
 import CartContextProvider from './context/CartContextProvider';
+
+
 
 
 function App() {
@@ -32,6 +35,7 @@ function App() {
                     <Route path='/products' element={<Store />} />
                     <Route path='/products/:id' element={<ProductDetail />} />
                     <Route path='/project' element={<Works />} />
+                    <Route path="/services/service-01" element={<Service1/>} />
                 </Routes>
             </CartContextProvider>
         </ProductContextProvider>

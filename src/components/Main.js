@@ -13,6 +13,7 @@ import HeaderPages from "./HeaderPages";
 
 //CSS
 import Styles from "../css/Main.module.css";
+import Container from "react-bootstrap/Container";
 
 
 
@@ -20,14 +21,14 @@ import Styles from "../css/Main.module.css";
 
 const Main = () => {
     return (
-        <div>
+        <>
             <Header />
             <SuccessWorks />
             <OurServices />
             <OurTeam />
             <QuestionSection />
             <Footer />
-        </div>
+        </>
     );
 };
 

@@ -1,10 +1,12 @@
-
-.header{
-    width: 100%;
+.headerPageContainer{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 20px 70px;
+}
+.headerTop{
+    padding: 20px;
+    width: 90%;
 }
 
 .logo img{
@@ -78,8 +80,10 @@
 /*----------------------- NAVBAR ------------------*/
 .navbar{
     width: 90%;
+    height: fit-content;
     background-color: var(--black-2);
     outline: 5px solid white;
+    padding:10px 30px 0 15px;
 }
 
 .logo2{
@@ -90,8 +94,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    margin: 0 auto;
 }
 
 .navLeftMenu , .navRight ul{
@@ -99,6 +101,10 @@
     list-style: none;
     column-gap: 20px;
 
+}
+
+.navItem{
+    position: relative;
 }
 
 .navItem a{
@@ -109,10 +115,6 @@
 
 .navItem a:hover{
     color: var(--orange);
-}
-
-.navItem{
-    position: relative;
 }
 
 .subMenu {
@@ -160,14 +162,14 @@
 /*--------------------- main header---------------*/
 
 .headerMain{
+    height:auto;
     width: 100%;
-    height: 40vh;
     background-color: var(--black-1);
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: -20px;
-    padding: 60px;
+    padding:100px 60px;
 }
 
 .headerLeft :nth-child(1){
@@ -261,9 +263,13 @@
 
 /*--------- Navbar --------*/
 
+    .navbar{
+        padding: 10px 15px;
+    }
     .hamburgerMenu{
         background-color: white;
         margin: 10px 0;
+        padding: 3px;
     }
 
     .navCollapse{
@@ -285,7 +291,7 @@
         flex-direction: column;
     }
 
-    .navLeft a {
+    .navLeftMenu a {
         font-size: 10px;
     }
 

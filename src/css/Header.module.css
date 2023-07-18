@@ -1,8 +1,7 @@
-.header{
-    position: relative;
-    height: 90vh;
-    width: 100%;
-    }
+/*.header{*/
+/*    position: relative;*/
+/*    height: auto;*/
+/*    }*/
 .headerTop{
     display: flex;
     justify-content: space-between;
@@ -74,13 +73,11 @@
 }
 /*---------------- NAVBAR --------------*/
 .navbar{
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     background-color: var(--black-2);
     padding: 20px 100px;
-    margin:0 12px;
 }
 
 .logo img{
@@ -165,13 +162,15 @@
 /*--------------------- main header---------------*/
 
 .headerMain{
+    width:100%;
     background-position:bottom;
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: column;
     row-gap: 2rem;
-    padding:50px;
+    padding:50px 0;
+    margin: 0;
 }
 
 .headerMain img{
@@ -248,6 +247,9 @@
 
 @media only screen and (max-width: 576px) {
 
+    .headerContainer{
+        margin-bottom: 50px;
+    }
     .headerTop{
         padding: 10px 20px;
         row-gap: 10px;
@@ -316,8 +318,7 @@
     /*--------- Navbar --------*/
 
     .navbar{
-        padding: 10px;
-        margin:12px;
+        padding: 10px 20px;
     }
 
     .logo img{
@@ -335,15 +336,14 @@
     .hamburgerMenu{
         background-color: white;
         padding: 5px;
-        margin: 10px 0;
     }
 
     .navCollapse{
         z-index: 999;
         position: absolute;
-        width: 90%;
-        top: 90px;
-        right: 5%;
+        width: 95%;
+        top: 60px;
+        right: 2.5%;
         padding: 20px;
         background-color: var(--black-1);
         border: 3px solid white;

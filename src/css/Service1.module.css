@@ -1,0 +1,238 @@
+.container{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.topTextHeader{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.topTextHeader h2{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.topTextHeader span{
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--gray-3);
+}
+
+.galleryImagCenter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    row-gap: 1px;
+    padding: 0 200px;
+    margin-bottom: 100px;
+}
+
+.serviceBoxImg{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:flex-end;
+}
+
+
+.servicesImg{
+    height: min-content;
+    transition: all 500ms;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+.servicesImg img{
+    width: 100%;
+    height: inherit;
+    transition: all 500ms;
+}
+
+.servicesImg:hover{
+    outline: 15px solid white;
+    z-index: 3;
+    box-shadow: 5px 5px 34px 2px rgba(0,0,0,0.76);
+    overflow: hidden;
+}
+
+.servicesImg:hover img{
+    transform: scale(108%);
+}
+
+.serviceBoxImg p{
+    text-align: center;
+    color: white;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding:10px;
+    margin-bottom: 0;
+    filter: opacity(80%);
+}
+
+/*------------------- Box Center --------------*/
+.boxCenter{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../image/services/service-01/cool-plumber.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.bgBlack{
+    background-color: var(--black-1);
+    height: 25%;
+}
+
+.bgCenter{
+    height: 50%;
+    width: 60%;
+    background-image: url("../image/services/service-01/cool-plumber.png");
+    background-position: center;
+    padding: 18px;
+    position: absolute;
+    z-index: 4;
+    margin-top: -100px;
+}
+
+.bgCenterBox{
+    background-color: var(--orange);
+    width: 100%;
+    height: 100%;
+    filter: opacity(80%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgCenterBox a{
+    cursor: pointer;
+}
+
+.bgorang{
+    background-color: var(--orange);
+    height: 75%;
+    filter: opacity(90%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bgorangText{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.counterBox{
+    display: flex;
+    column-gap: 7px;
+}
+.imgIcons{
+    width: 40px;
+}
+
+.serviceCounter{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+
+.serviceCounterText{
+    font-size: 10px;
+    color: white;
+}
+
+/*------------------ Brand Section -----------*/
+.BrandSection{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+    width: 100%;
+    padding:80px 15%;
+    background-color: var(--background-white-gray);
+}
+
+.BrandSectionBox{
+    padding: 15px;
+    border: 1px solid var(--gray-3);
+    background-color:white;
+    text-align: center;
+}
+
+/*---------- @media max-width: 576px --------*/
+@media only screen and (max-width: 576px) {
+
+    .container{
+        padding-top: 50px;
+    }
+
+    .topTextHeader{
+        margin-bottom: 30px;
+    }
+
+    .topTextHeader h2{
+        font-size: 2rem;
+    }
+
+    .topTextHeader span{
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .galleryImagCenter{
+        flex-direction: column;
+        padding: 0 30px;
+        margin-bottom:30px;
+    }
+
+    .boxCenter{
+        height: 80vh;
+    }
+
+    .bgBlack{
+        height: 20%;
+    }
+    .bgorang{
+        height: 80%;
+    }
+    .bgCenter{
+        height: 40%;
+        width: 90%;
+        padding: 8px;
+        z-index: 4;
+        margin-top: -180px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .bgorangText{
+        bottom: 30px;
+        width: 90%;
+    }
+
+    .BrandSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+        padding:50px 20%;
+    }
+
+}
+
