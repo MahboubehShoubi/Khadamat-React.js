@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 //Component
 import HeaderPages from "./HeaderPages";
 import Footer from "./Footer";
+import Brand from "./Brand";
 
 import Styles from "../css/Service1.module.css";
 
@@ -18,9 +19,7 @@ import volvoTruck from "../image/services/service-01/volvo-truck.png";
 import womanEngineer02 from "../image/services/service-01/woman-engineer-2.png";
 import workerUsingPowertool from "../image/services/service-01/worker-using-powertool.png";
 import player from "../image/Images/play.png";
-import HEXAGON from "../image/brand-logo/brand-logo-4.png";
-import PlusInfinity from "../image/brand-logo/brand-logo-2.png";
-import TranSport from "../image/brand-logo/brand-logo-3-1.png";
+
 
 //Icons
 import award from "../assets/icons/award.svg";
@@ -148,28 +147,10 @@ const Service1 = () => {
 
                 </Row>
 
-            {/*------------------------------ Brand Section ----------------------------*/}
-
-                <Row className={Styles.BrandSection}>
-                    <Col className={Styles.BrandSectionBox}>
-                        <img src={HEXAGON}/>
-                    </Col>
-
-                    <Col className={Styles.BrandSectionBox}>
-                        <img src={PlusInfinity}/>
-                    </Col>
-
-                    <Col className={Styles.BrandSectionBox}>
-                        <img src={TranSport}/>
-                    </Col>
-
-                    <Col className={Styles.BrandSectionBox}>
-                        <img src={PlusInfinity}/>
-                    </Col>
-                </Row>
 
             </Container>
 
+            <Brand />
             <Footer/>
 
         </>

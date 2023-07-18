@@ -156,24 +156,6 @@
     color: white;
 }
 
-/*------------------ Brand Section -----------*/
-.BrandSection{
-    display: flex;
-    justify-content: space-between;
-    column-gap: 20px;
-    align-items: center;
-    width: 100%;
-    padding:80px 15%;
-    background-color: var(--background-white-gray);
-}
-
-.BrandSectionBox{
-    padding: 15px;
-    border: 1px solid var(--gray-3);
-    background-color:white;
-    text-align: center;
-}
-
 /*---------- @media max-width: 576px --------*/
 @media only screen and (max-width: 576px) {
 
@@ -223,15 +205,6 @@
     .bgorangText{
         bottom: 30px;
         width: 90%;
-    }
-
-    .BrandSection{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 25px;
-        padding:50px 20%;
     }
 
 }

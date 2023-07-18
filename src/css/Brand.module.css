@@ -1,0 +1,39 @@
+/*------------------ Brand Section -----------*/
+.brandContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.BrandSection{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 20px;
+    align-items: center;
+    padding:80px 15%;
+    background-color: var(--background-white-gray);
+}
+
+.BrandSectionBox{
+    padding: 15px;
+    border: 1px solid #e8e7e7;
+    background-color:white;
+    text-align: center;
+}
+
+/*---------- @media max-width: 576px --------*/
+@media only screen and (max-width: 576px) {
+
+    .BrandSection{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 25px;
+        padding:50px 20%;
+    }
+
+}
+

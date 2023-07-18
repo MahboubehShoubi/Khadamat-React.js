@@ -126,9 +126,9 @@ const Header = () => {
                             <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
                                 <ul className={Styles.subMenu}>
                                     <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
-                                    <li className={Styles.subItem}><Link>Service 02</Link></li>
-                                    <li className={Styles.subItem}><Link>Service 03</Link></li>
-                                    <li className={Styles.subItem}><Link>Single Service</Link></li>
+                                    <li className={Styles.subItem}><Link to="/services/service-02">>Service 02</Link></li>
+                                    <li className={Styles.subItem}><Link to="/services/service-03">>Service 03</Link></li>
+                                    <li className={Styles.subItem}><Link to="/services/service-single">>Single Service</Link></li>
                                 </ul>
                             </li>
                             <li className={Styles.navItem}><Link to="/project">Works</Link></li>
