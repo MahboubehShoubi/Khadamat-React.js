@@ -13,6 +13,7 @@ import ShopCart from './components/ShopCart';
 import Works from "./components/Works";
 import Service1 from "./components/Service1";
 import Service2 from "./components/Service2";
+import Service3 from "./components/Service3";
 
 //Context
 import ProductContextProvider from './context/ProductContextProvider';
@@ -38,8 +39,7 @@ function App() {
                     <Route path='/project' element={<Works />} />
                     <Route path="/services/service-01" element={<Service1/>} />
                     <Route path="/services/service-02" element={<Service2/>} />
-                    <Route path="/services/service-01" element={<Service1/>} />
-                    <Route path="/services/service-01" element={<Service1/>} />
+                    <Route path="/services/service-03" element={<Service3/>} />
                 </Routes>
             </CartContextProvider>
         </ProductContextProvider>

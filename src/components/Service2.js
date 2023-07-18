@@ -35,8 +35,12 @@ import Service2_9 from "../image/services/service-02/icon/servive2 (9).svg";
 const Service2 = () => {
     return (
         <>
+
+{/*-------------------------------- Header -------------------------------*/}
             <HeaderPages part1="OUR" part2="SERVICES" part3="SERVICES" />
 
+
+ {/*---------------------------------- Container ------------------------*/}
             <Container fluid className={Styles.container}>
                 <Row xs={1} lg={3} className={Styles.serviceInfo}>
 
@@ -149,8 +153,12 @@ const Service2 = () => {
 
             </Container>
 
+
+ {/*-------------------------- Component Brand -------------------------*/}
             <Brand />
 
+
+{/*-------------------------------- Footer ---------------------------------*/}
             <Footer />
         </>
     );

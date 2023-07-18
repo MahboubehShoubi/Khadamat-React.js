@@ -38,8 +38,11 @@ const Service1 = () => {
 
     return (
         <>
+
+{/*--------------------------------- Header -----------------------------------*/}
             <HeaderPages part1="OUR" part2="SERVICES" part3="SERVICES" />
 
+{/*-------------------------------- Container --------------------------------*/}
             <Container fluid className={Styles.container}>
                     <Row className={Styles.topTextHeader}>
                         <h2>What We Offer</h2>
@@ -150,7 +153,10 @@ const Service1 = () => {
 
             </Container>
 
+{/*-----------------------------Component Brand ----------------------------*/}
             <Brand />
+
+{/*------------------------------ Footer -----------------------------------*/}
             <Footer/>
 
         </>
