@@ -44,7 +44,7 @@
     color: black;
     display: inline-block;
     padding: 5px 15px;
-    border: 1px solid black;
+    border: 2px solid black;
     transition: all 800ms;
     font-size: 12px;
 }

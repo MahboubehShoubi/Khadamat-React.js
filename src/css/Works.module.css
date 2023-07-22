@@ -8,6 +8,8 @@
 
 .listTab{
     font-size: 18px;
+    --bs-nav-link-color: black;
+    --bs-nav-tabs-link-active-color: var(--orange);
 }
 
 @media only screen and (max-width: 576px) {

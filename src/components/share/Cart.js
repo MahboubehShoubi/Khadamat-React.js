@@ -1,7 +1,13 @@
 import React  , { useContext } from 'react';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 //Contect
 import { CartContext } from '../../context/CartContextProvider';
+
+//CSS
+import Styles from "../../css/Cart.module.css";
 
 //function
 import { ShortTittles } from "../../functions/helpers";
@@ -12,25 +18,28 @@ import RemoveIcon from "../../assets/icons/trash.svg";
 const Cart = ({data}) => {
 
     const {state , dispatch} = useContext(CartContext);
+
     return (
-        <div>
-            <div>
-                 <img src={data.image} alt='product' style={{width:"300px"}} />
-                 <div>
-                     <span>{ShortTittles(data.title)}</span><br />
-                     <span>{data.price}</span><br />
-                 </div>
-                 <span>{data.quantity}</span>
-                 <div>
-                    { data.quantity > 1 ? 
-                       <button onClick={() => dispatch({type:"DECREASE" , payload: data})}>-</button> :
-                       <button onClick={() => dispatch({type:"REMOVE_ITEM" , payload: data})}><img src={RemoveIcon} alt='product' style={{width :"13px"}} /></button>
-                     }
-                     <button onClick={() => dispatch({type:"INCREASE" , payload:data})}>+</button>
-                 </div>
+        <Container fluid className={Styles.cartContainer}>
+            <div className={Styles.productCartImg}>
+                <img src={data.image} alt='product' />
             </div>
-                
-        </div>
+            <div className={Styles.productCartDetail}>
+                <div className={Styles.productDetail}>
+                    <span className={Styles.ShortTittles}>{ShortTittles(data.title)}</span>
+                    <span className={Styles.price}>Price : {data.price}</span>
+                </div>
+                <span className={Styles.quantity}>Counter :{data.quantity}</span>
+                <div className={Styles.btnState}>
+                    { data.quantity > 1 ?
+                        <button className={Styles.decrease} onClick={() => dispatch({type:"DECREASE" , payload: data})}>-</button> :
+                        <button className={Styles.removeItem} onClick={() => dispatch({type:"REMOVE_ITEM" , payload: data})}><img src={RemoveIcon} alt='product' /></button>
+                    }
+                    <button className={Styles.increase} onClick={() => dispatch({type:"INCREASE" , payload:data})}>+</button>
+                </div>
+            </div>
+        </Container>
+
     );
 };
 

@@ -1,7 +1,14 @@
 import React , {useContext} from 'react';
 import {Link, useParams} from "react-router-dom";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
+//Content
 import { ProductsContext } from '../context/ProductContextProvider';
+
+//CSS
+import Styles from "../css/ProductDetail.module.css";
 
 const ProductDetail = () => {
 
@@ -13,22 +20,24 @@ const ProductDetail = () => {
 
 
     return (
-        <div style={{display:'flex', justifyContent:"space-between" , gap : "50px"}}>
-            <div>
-                <img src={image} style={{ width:"400px"}} />
-            </div>
-            <div>
-                <h3>title : {title}</h3>
-                <p>{description}</p>
-                <p>category : {category} </p>
-                <div>
-                    <span>price : {price} $</span>
+        <Container fluid className={Styles.container}>
+            <Row className={Styles.productDetailContainer}>
+                <div className={Styles.productImg}>
+                    <img src={image} />
                 </div>
-                <div>
-                    <Link to='/products' >Back to Shop</Link>
+                <div className={Styles.productDetail}>
+                    <h3>{title}</h3>
+                    <p className={Styles.description}>{description}</p>
+                    <p>category : {category} </p>
+                    <div>
+                        <span className={Styles.price}>price : {price} $</span>
+                    </div>
+                    <div>
+                        <Link to='/products' className={Styles.backToShop} >Back to Shop</Link>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </Row>
+        </Container>
     );
 };
 

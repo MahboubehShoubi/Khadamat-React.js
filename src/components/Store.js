@@ -1,4 +1,5 @@
 import React , { useContext } from 'react';
+import Container from "react-bootstrap/Container";
 
 //component
 import Product from './share/Product';
@@ -9,6 +10,9 @@ import Navbar from './Navbar';
 //context
 import { ProductsContext } from '../context/ProductContextProvider';
 
+//CSS
+import Styles from "../css/Store.module.css";
+
 const Store = () => {
 
     const products = useContext(ProductsContext);
@@ -16,11 +20,12 @@ const Store = () => {
         <>
             <HeaderPages part1="OUR" part2="PRODUCTS" part3="OUR PRODUCT" />
             <Navbar />
-            <div style={{display:"flex" , flexWrap:"wrap" , justifyContent:"space-between" , padding: "50px"}}>
+            <Container fluid className={Styles.container}>
+                <div className={Styles.storeContainer}>
+                    {products.map(product => <Product key={product.id}  productData={product} /> )}
+                </div>
+            </Container>
 
-                {products.map(product => <Product key={product.id}  productData={product} /> )}
-
-            </div>
             <Footer />
 
         </>
