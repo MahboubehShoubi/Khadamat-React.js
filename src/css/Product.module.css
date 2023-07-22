@@ -16,6 +16,11 @@
     height:150px;
 }
 
+.productDetailBox{
+    width: 100%;
+    text-align: center;
+}
+
 .productHeader h3{
     font-size: 16px;
     font-weight: bold;
@@ -106,7 +111,27 @@
 
 /*----------------- @media --------------*/
 @media only screen and (max-width: 576px) {
+
     .productBox{
         width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        row-gap: 0;
+        border-radius: 5px;
+        padding: 20px;
     }
+
+    .imgProduct{
+        width: 30%;
+        height:150px;
+    }
+
+    .productDetailBox{
+        width: 65%;
+        text-align: left;
+    }
+
 }

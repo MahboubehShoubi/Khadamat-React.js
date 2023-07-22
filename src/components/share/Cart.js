@@ -25,11 +25,14 @@ const Cart = ({data}) => {
                 <img src={data.image} alt='product' />
             </div>
             <div className={Styles.productCartDetail}>
-                <div className={Styles.productDetail}>
-                    <span className={Styles.ShortTittles}>{ShortTittles(data.title)}</span>
-                    <span className={Styles.price}>Price : {data.price}</span>
+                <div className={Styles.productCartState}>
+                    <div className={Styles.productDetail}>
+                        <span className={Styles.ShortTittles}>{ShortTittles(data.title)}</span>
+                        <span className={Styles.price}>Price : {data.price}</span>
+                    </div>
+                    <span className={Styles.quantity}>Counter :{data.quantity}</span>
+
                 </div>
-                <span className={Styles.quantity}>Counter :{data.quantity}</span>
                 <div className={Styles.btnState}>
                     { data.quantity > 1 ?
                         <button className={Styles.decrease} onClick={() => dispatch({type:"DECREASE" , payload: data})}>-</button> :

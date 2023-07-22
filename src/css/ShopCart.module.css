@@ -24,6 +24,12 @@
     height: auto;
 }
 
+.productHandlerTotal{
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 10px;
+}
+
 .productHandler>span{
     font-size: 14px;
 }
@@ -94,4 +100,36 @@
 .backToShop a:hover , .buyMore a:hover {
     background-color: inherit;
     color: black;
+}
+
+
+/*-------------- @media -------------*/
+
+@media only screen and (max-width: 576px) {
+
+    .container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .productDetail {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .productHandler{
+        width: 100%;
+        border-left: none;
+        border-bottom: 2px solid gray;
+    }
+
+    .productHandlerTotal{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 5%;
+        width: 100%;
+    }
 }

@@ -58,3 +58,63 @@
     background-color: black;
     color: white;
 }
+
+
+/* ----------------- @media ---------*/
+
+@media only screen and (max-width: 576px) {
+
+    .container{
+        padding: 50px 8%;
+    }
+
+    .productDetailContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 30px;
+        padding: 20px;
+    }
+
+    .productImg{
+        width: 100%;
+    }
+
+    .productImg img{
+        width: 50%;
+    }
+
+    .productDetail{
+        width: 100%;
+    }
+
+    .productDetail h3{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .description{
+        font-size: 12px;
+        color: var(--gray-3);
+    }
+
+    .price{
+        font-weight: bold;
+    }
+
+    .backToShop{
+        text-decoration: none;
+        color: black;
+        border: 2px solid black;
+        display: inline-block;
+        padding: 8px 20px;
+        transition: all 800ms;
+        font-size: 14px;
+    }
+
+    .backToShop:hover{
+        background-color: black;
+        color: white;
+    }
+
+}
