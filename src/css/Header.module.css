@@ -1,8 +1,14 @@
-/*.header{*/
-/*    position: relative;*/
-/*    height: auto;*/
-/*    }*/
+
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    height: fit-content;
+}
 .headerTop{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -73,6 +79,7 @@
 }
 /*---------------- NAVBAR --------------*/
 .navbar{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -123,6 +130,7 @@
 }
 
 .subMenu{
+    width: max-content;
     position: absolute;
     display: none;
     left: 0;
@@ -133,7 +141,6 @@
     text-align: left;
     padding:10px 30px;
     border: 1px solid #a4a4a4;
-    width: max-content;
     z-index: 2;
 }
 
@@ -169,8 +176,6 @@
     justify-content:center;
     flex-direction: column;
     row-gap: 2rem;
-    padding:50px 0;
-    margin: 0;
 }
 
 .headerMain img{
@@ -187,7 +192,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50vw;
     text-align: center;
     row-gap: 3rem;
 }
@@ -248,7 +252,7 @@
 @media only screen and (max-width: 576px) {
 
     .headerContainer{
-        margin-bottom: 50px;
+        margin-bottom: 100px;
     }
     .headerTop{
         padding: 10px 20px;
@@ -280,7 +284,7 @@
     }
 
     .getQuote a{
-        padding: 5px 30px;
+        padding: 5px 20px;
         font-size: 10px;
         border-radius: 5px;
     }
@@ -382,7 +386,7 @@
 
     .headerMain{
         row-gap: 1rem;
-        padding: 20px;
+        padding:60px 20px;
     }
     .headerMain img{
         object-fit: cover;
@@ -405,11 +409,11 @@
     }
 
     .headerMainButton{
-        column-gap: 10px;
+        column-gap: 8px;
     }
 
     .ourStory , .contact{
-        padding: 5px 10px;
+        padding: 5px 15px;
         font-size: 10px;
     }
 }

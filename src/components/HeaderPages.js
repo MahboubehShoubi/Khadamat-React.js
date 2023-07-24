@@ -85,7 +85,7 @@ const HeaderPages = (props) => {
                     </Row>
                 </Col>
 
-                <Col xs={4} sm={4} md={2} lg={2} className={Styles.getQuote} onClick={handleShow}>
+                <Col xs={12} sm={12} md={2} lg={2} className={Styles.getQuote} onClick={handleShow}>
                     <a href="#">Get A Quote</a>
                 </Col>
             </Row>

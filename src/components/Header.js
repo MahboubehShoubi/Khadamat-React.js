@@ -76,7 +76,7 @@ const Header = () => {
                     </Row>
                 </Col>
 
-                <Col xs={5} sm={5} md={3} lg={3} className={Styles.getQuote} onClick={handleShow}>
+                <Col xs={12} sm={12} md={3} lg={3} className={Styles.getQuote} onClick={handleShow}>
                     <a href="#">Get A Quote</a>
                 </Col>
             </Row>
@@ -137,8 +137,7 @@ const Header = () => {
                     </Navbar.Collapse>
                     <section >
                         <ul className={Styles.navRight}>
-                            <li><a href="#"><img src={Shop} /></a></li>
-                            <li><a href="#"><img src={Search}/></a></li>
+                            <li><Link to='/products'><img src={Shop} /></Link></li>
                         </ul>
                     </section>
                 </Col>
@@ -152,7 +151,7 @@ const Header = () => {
                     <p>CONSTRUCTION & BUILDING</p>
                 </Col>
 
-                <Col xs={6} sm={6} md={4} lg={4} className={Styles.headerMainButton}>
+                <Col xs={12} sm={12} md={4} lg={4} className={Styles.headerMainButton}>
                     <Link to="/about" className={Styles.ourStory}>Our Story</Link>
                     <Link to="/contact" className={Styles.contact}>Contact Us</Link>
                 </Col>
