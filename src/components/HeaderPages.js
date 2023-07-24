@@ -44,10 +44,10 @@ const HeaderPages = (props) => {
                     <Link to="/"><img src={Logo} /></Link>
                 </Col>
 
-                <Col xs={9} sm={9} md={8} lg={8}>
+                <Col xs={12} sm={12} md={8} lg={8}>
                     <Row className={Styles.communication}>
 
-                        <Col>
+                        <Col className={Styles.item1}>
                             <section className={Styles.item1}>
                                 <section>
                                     <img src={FindUs} className={Styles.icofontMap} />
@@ -59,7 +59,7 @@ const HeaderPages = (props) => {
                             </section>
                         </Col>
 
-                        <Col>
+                        <Col className={Styles.item2}>
                             <section className={Styles.item2}>
                                 <section>
                                     <img src={Email} className={Styles.icofontEmail} />
@@ -71,7 +71,7 @@ const HeaderPages = (props) => {
                             </section>
                         </Col>
 
-                        <Col>
+                        <Col className={Styles.item3}>
                             <section className={Styles.item3}>
                                 <section>
                                     <img src={Call} className={Styles.icofontUiCall} />
@@ -85,7 +85,7 @@ const HeaderPages = (props) => {
                     </Row>
                 </Col>
 
-                <Col xs={3} sm={3} md={2} lg={2} className={Styles.getQuote} onClick={handleShow}>
+                <Col xs={4} sm={4} md={2} lg={2} className={Styles.getQuote} onClick={handleShow}>
                     <a href="#">Get A Quote</a>
                 </Col>
             </Row>

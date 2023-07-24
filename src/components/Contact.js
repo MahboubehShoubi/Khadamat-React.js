@@ -1,4 +1,7 @@
 import React from 'react';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 //Component
 import HeaderPages from "./HeaderPages";
@@ -24,17 +27,17 @@ import youtube from "../assets/icons/youtube-play2.svg";
 
 const Contact = () => {
     return (
-        <div>
+        <>
             {/*----------------- HEADER ---------------------------*/}
             <HeaderPages part1="CONTACT" part2="US" part3="CONTACT US" />
 
 
             {/*------------------ MAIN -------------------------*/}
-            <section className={Styles.mainContact}>
+            <Container fluid className={Styles.mainContact}>
 
-                <section className={Styles.AddressMap}>
+                <Row className={Styles.AddressMap}>
 
-                    <section className={Styles.boxAddress}>
+                    <Col className={Styles.boxAddress}>
 
                         <h3>Sagrada Familia, spain</h3>
                         <p className={Styles.informationCompany}>178 ipsum dolor sit , consectet adipisi elit,
@@ -52,23 +55,23 @@ const Contact = () => {
                                 <li><a href="#"><img src={youtube} alt="Icon" className={Styles.IconContact} /></a></li>
                             </ul>
                         </section>
-                    </section>
+                    </Col>
 
-                    <section className={Styles.boxMap}>
+                    <Col className={Styles.boxMap}>
                         <img src={MapImage} alt="ImageMap"/>
                         <img src={MapImage3} alt="ImageMap"/>
                         <img src={MapImage5} alt="ImageMap"/>
                         <img src={MapImage2} alt="ImageMap"/>
                         <img src={MapImage1} alt="ImageMap"/>
                         <img src={MapImage4} alt="ImageMap"/>
-                    </section>
+                    </Col>
 
-                </section>
+                </Row>
 
 
                 {/*!--------------------- SEND MESSAGE ------------------------>*/}
 
-                <section className={Styles.boxMessage}>
+                <Row className={Styles.boxMessage}>
                     <p>HAVE A QUESTION?</p>
                     <h1>Send Message</h1>
                     <form onSubmit="sendMessageHandler" className={Styles.formSendMessage}>
@@ -80,13 +83,13 @@ const Contact = () => {
                         <textarea placeholder="Comment"></textarea>
                         <button type="submit">SEND MESSAGE</button>
                     </form>
-                </section>
+                </Row>
 
-            </section>
+            </Container>
 
         {/*----------------- FOOTER-------------------*/}
             < Footer />
-        </div>
+        </>
     );
 };
 

@@ -219,20 +219,30 @@
         display: none;
     }
 
+    .headerTop{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        row-gap: 8px;
+    }
+
     .communication{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .item1{
+        display: none;
+    }
+    .item2 , .item3{
         align-items: flex-start;
     }
 
-    .item1 , .item2 , .item3{
-        align-items: flex-start;
-    }
-
-    .icofontEmail , .icofontMap ,.icofontUiCall{
-        width: 15px;
-    }
-
-    .itemRightText{
-        font-size: 10px;
+    .icofontEmail ,.icofontUiCall{
+        width: 10px;
     }
 
     .itemRightText :nth-child(1) ,
@@ -247,6 +257,7 @@
 
     .modalBox{
         width: 90%;
+        left: 5%;
     }
 
     .modalHeader img{

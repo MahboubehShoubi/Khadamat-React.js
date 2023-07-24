@@ -1,11 +1,18 @@
 /*---------------- Address MAP ---------*/
-
+.mainContact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /*------ BOX Address --------*/
 .AddressMap{
     width: 100%;
     height: 70vh;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0;
 }
 
 .boxAddress{
@@ -62,6 +69,7 @@
     width: 50%;
     height: inherit;
     overflow: hidden;
+    padding: 0;
 }
 
 .boxMap img{
@@ -76,7 +84,6 @@
     background-color: var(--background-gray);
     padding: 100px 50px;
     display: flex;
-    /*justify-content: center;*/
     flex-direction: column;
     align-items: center;
     row-gap: 10px;
@@ -128,13 +135,111 @@ form button{
     background-color: black;
     color: white;
     padding:13px 25px;
-    display: flex;
-    column-gap: 10px;
     transition: all 1s;
     border: none;
+    word-spacing: 8px;
 }
 
 form button:hover{
     background-color: var(--orange);
     cursor: pointer;
+}
+
+/*---------- @media max-width: 576px --------*/
+@media only screen and (max-width: 576px) {
+
+    /*------ BOX Address --------*/
+    .AddressMap{
+        height:fit-content;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        row-gap: 20px;
+    }
+
+    .boxAddress{
+        width: 100%;
+        row-gap: 12px;
+    }
+
+    .boxAddress h3{
+        font-size: 1.5rem;
+    }
+
+    .boxAddress  {
+        font-size: 15px;
+    }
+
+    .callTel{
+        font-size: 1.5rem;
+    }
+
+    .socialMedia ul{
+        padding: 0;
+    }
+
+    .IconContact{
+        width: 18px;
+    }
+
+    /*------ BOX MAP -----*/
+    .boxMap{
+        width: 100%;
+    }
+    /*------------------ BOX MESSAGE ------------*/
+
+    .boxMessage{
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .boxMessage p{
+        color: var(--gray-3);
+    }
+
+    .boxMessage h1{
+        font-size: 2rem;
+    }
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    form section{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        column-gap: 0;
+        row-gap: 20px;
+        justify-content: center;
+    }
+
+    form input{
+        width: 100%;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+
+    form textarea{
+        font-size: 13px;
+    }
+
+    form button{
+        padding:10px 20px;
+        font-size: 13px;
+        word-spacing: 5px;
+    }
+
 }

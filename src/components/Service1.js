@@ -49,7 +49,8 @@ const Service1 = () => {
                         <span>OUR SERVICES</span>
                     </Row>
                     <Row className={Styles.galleryImagCenter}>
-                        <Row xs={1} sm={1} md={3} lg={3} className={Styles.serviceBoxImg}>
+
+                        <Row xs={1} sm={1} md={3} lg={3} className={Styles.serviceBoxImg1}>
                             <Col xs={12} sm={12} md={4} lg={4} className={Styles.servicesImg}>
                                 <img src={construction} alt="imgService01" />
                                 <p>Mechanical Engineering</p>
@@ -64,7 +65,7 @@ const Service1 = () => {
                             </Col>
                         </Row>
 
-                        <Row className={Styles.serviceBoxImg}>
+                        <Row className={Styles.serviceBoxImg2}>
                             <Col xs={12} sm={12} md={4} lg={4} className={Styles.servicesImg}>
                                 <img src={shovel} alt="imgService01"/>
                                 <p>Material Engineering</p>
