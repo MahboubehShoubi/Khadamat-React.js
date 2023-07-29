@@ -15,6 +15,8 @@ import Styles from "../css/HeaderPages.module.css";
 //Imags
 import Logo from "../image/logo/khadamat-logo.png";
 import Logo2 from "../image/logo/logo-khadamat.png";
+import HamburgerMenu from "../assets/icons/navigation-menu.svg";
+
 
 //Icons
 import FindUs from "../assets/icons/map.svg";
@@ -32,10 +34,8 @@ import CaretDown from "../assets/icons/caret-down.svg";
 const HeaderPages = (props) => {
     const {part1 , part2 , part3} = props;
 
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const [showModal, setShowModal] = useState(false);
+    const [showCollapse, setShowCollapse] = useState(false);
 
     return (
         <Container fluid className={Styles.headerPageContainer}>
@@ -85,12 +85,12 @@ const HeaderPages = (props) => {
                     </Row>
                 </Col>
 
-                <Col xs={12} sm={12} md={2} lg={2} className={Styles.getQuote} onClick={handleShow}>
+                <Col xs={12} sm={12} md={2} lg={2} className={Styles.getQuote} onClick={() => setShowModal(true)}>
                     <a href="#">Get A Quote</a>
                 </Col>
             </Row>
 
-            <Modal className={Styles.modalBox} show={show} onHide={handleClose}>
+            <Modal className={Styles.modalBox} show={showModal} onHide={() => setShowModal(false)} aria-labelledby="modal-Box">
                 <Modal.Header closeButton className={Styles.modalHeader}>
                     <section>
                         <img src={modalImg} alt="modalImag"/>
@@ -115,8 +115,8 @@ const HeaderPages = (props) => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>Close</Button>
-                    <Button variant="primary" onClick={handleClose}>Submit Now</Button>
+                    <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
+                    <Button variant="primary" onClick={() => setShowModal(false)}>Submit Now</Button>
                 </Modal.Footer>
             </Modal>
 
@@ -127,8 +127,10 @@ const HeaderPages = (props) => {
                 <Navbar.Brand  className={Styles.logo2}>
                     <Link to='/'><img src={Logo2}/></Link>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbar-nav" className={Styles.hamburgerMenu}/>
-                <Navbar.Collapse id="navbar-nav" className={Styles.navCollapse}>
+                <a aria-controls="navbar-nav-headerPage" className={Styles.hamburgerMenu} onClick={() => setShowCollapse(true)}>
+                    <img src={HamburgerMenu} />
+                </a>
+                <section className={Styles.navLeftMenu}>
                     <section className={Styles.navLeft}>
                         <ul className={Styles.navLeftMenu}>
                             <li className={Styles.navItem}><Link to="/">Home</Link></li>
@@ -156,8 +158,25 @@ const HeaderPages = (props) => {
                             <li><a href="#"><img src={Search} /></a></li>
                         </ul>
                     </section>
-                </Navbar.Collapse>
+                </section>
             </Navbar>
+
+            <Modal id="navbar-nav-headerPage" className={Styles.navCollapse} show={showCollapse} onHide={() => setShowCollapse(false)} aria-labelledby="Collapse-Box-HeaderPage">
+                <ul className={Styles.CollapseBox} id="Collapse-Box-HeaderPage">
+                    <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                    <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                    <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                        <ul className={Styles.subMenu}>
+                            <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
+                            <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
+                            <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
+                        </ul>
+                    </li>
+                    <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                    <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                    <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
+                </ul>
+            </Modal>
 
             {/* <!---------------------  Main Header ------------------> */}
 

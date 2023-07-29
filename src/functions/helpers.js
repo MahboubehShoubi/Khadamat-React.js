@@ -19,4 +19,4 @@ const quantitycount = (state , id) => {
 
 }
 
-export {ShortTittles , isInCart , quantitycount};
+export {ShortTittles , isInCart , quantitycount };

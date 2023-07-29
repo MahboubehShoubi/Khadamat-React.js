@@ -90,7 +90,12 @@
     display: none;
 }
 
-.navCollapse{
+.hamburgerMenu{
+    display: none;
+}
+
+.navLeftMenu{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -277,33 +282,41 @@
     .navbar{
         padding: 10px 15px;
     }
+
     .hamburgerMenu{
-        background-color: white;
-        margin: 10px 0;
-        padding: 3px;
+        display: block;
+        width:fit-content;
+        background-color: #282828;
+    }
+    .hamburgerMenu img{
+        width: 30px;
     }
 
     .navCollapse{
-        z-index: 999;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        padding: 20px;
-        background-color: var(--black-1);
-        border: 3px solid white;
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-        align-items: start;
+        display: none;
     }
 
     .navLeftMenu{
-        display: flex;
-        flex-direction: column;
+        display: none;
     }
 
-    .navLeftMenu a {
-        font-size: 10px;
+    .navCollapse{
+        background-color: var(--black-2);
+        border:3px solid white;
+        width: 80%;
+        left: 10%;
+        height: fit-content;
+        padding: 20px 15px 40px;
+        top: 160px;
+    }
+
+    .CollapseBox{
+        display:flex ;
+        flex-direction: column;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: var(--black-2);
     }
 
     .subMenu{

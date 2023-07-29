@@ -4,12 +4,12 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import CountUp from 'react-countup';
 
+//Component
+// import CounterUp from "./share/CounterUp";
+
+
 //CSS
 import Styles from '../css/SuccessWorks.module.css';
-
-//Functions
-// import { counter } from "../functions/helpers";
-
 
 //Images
 import ImgBottom from '../image/Images/build-img-one.jpg';
@@ -52,6 +52,7 @@ const SuccessWorks = () => {
                         <Row className={Styles.counters}>
                             <Col xs={6} sm={6} md={3} lg={3} className={Styles.counter}>
                                 <span className={Styles.project} name="project">
+                                    {/*<CounterUp end={200} time={10}/>*/}
                                     <CountUp end={200} duration={5} />
                                 </span>
                                 <span>PROJECTS</span>
@@ -59,6 +60,7 @@ const SuccessWorks = () => {
 
                             <Col xs={6} sm={6} md={3} lg={3} className={Styles.counter} >
                                 <span className={Styles.employers} name='employers'>
+                                    {/*<CounterUp end={875} time={10}/>*/}
                                     <CountUp end={875} duration={5}/>
                                 </span>
                                 <span>EMPLOYERS</span>
@@ -66,6 +68,7 @@ const SuccessWorks = () => {
 
                             <Col xs={6} sm={6} md={3} lg={3} className={Styles.counter}>
                                 <span className={Styles.customers} name='customers'>
+                                    {/*<CounterUp end={1231} time={10} />*/}
                                     <CountUp end={1231} duration={5}/>
                                 </span>
                                 <span>CUSTOMERS</span>
@@ -73,6 +76,7 @@ const SuccessWorks = () => {
 
                             <Col xs={6} sm={6} md={3} lg={3} className={Styles.counter}>
                                 <span className={Styles.awards} name="awards">
+                                    {/*<CounterUp end={26} time={50} />*/}
                                     <CountUp end={26} duration={7}/>
                                 </span>
                                 <span>AWARDS</span>

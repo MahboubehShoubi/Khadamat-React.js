@@ -24,13 +24,16 @@ import Call from "../assets/icons/ui-call.svg";
 import Search from "../assets/icons/search.svg";
 import Shop from "../assets/icons/shop.svg";
 import CaretDown from "../assets/icons/caret-down.svg";
+import HamburgerMenu from "../assets/icons/navigation-menu.svg";
 
 
 const Header = () => {
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
+    const [showCollapse, setShowCollapse] = useState(false);
 
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => setShow(true);
 
     return (
 
@@ -76,17 +79,17 @@ const Header = () => {
                     </Row>
                 </Col>
 
-                <Col xs={12} sm={12} md={3} lg={3} className={Styles.getQuote} onClick={handleShow}>
+                <Col xs={12} sm={12} md={3} lg={3} className={Styles.getQuote} onClick={() => setShowModal(true)}>
                     <a href="#">Get A Quote</a>
                 </Col>
             </Row>
 
-            <Modal className={Styles.modalBox} show={show} onHide={handleClose}>
+            <Modal className={Styles.modalBox} show={showModal} onHide={() => setShowModal(false)} aria-labelledby="modal-Box">
                 <Modal.Header closeButton className={Styles.modalHeader}>
                     <section>
                         <img src={modalImg} alt="modalImag"/>
                     </section>
-                    <section>
+                    <section id="modal-Box">
                         <Modal.Title>GET A QUOTE</Modal.Title>
                         <p>Apparently we had reached a great height in the atmosphere,
                             for the sky was a dead black, and the stars had ceased to twinkle.
@@ -106,8 +109,8 @@ const Header = () => {
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button className={Styles.btnModal} variant="secondary" onClick={handleClose}>Close</Button>
-                    <Button className={Styles.btnModal} variant="primary" onClick={handleClose}>Submit Now</Button>
+                    <Button className={Styles.btnModal} variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
+                    <Button className={Styles.btnModal} variant="primary" onClick={() => setShowModal(false)}>Submit Now</Button>
                 </Modal.Footer>
             </Modal>
 
@@ -117,9 +120,16 @@ const Header = () => {
                 <Col xs={4} sm={4} md={3} lg={3} className={Styles.logo}>
                     <Link to="/main"><img src={Logo} /></Link>
                 </Col>
-                <Col xs={{ span: 3, offset: 5 }} sm={{ span: 3, offset: 5 }} md={{ span:9, offset: 0}} lg={{ span:9, offset: 0 }} className={Styles.navCollapseBox}>
-                    <Navbar.Toggle aria-controls="navbar-nav" className={Styles.hamburgerMenu}/>
-                    <Navbar.Collapse id="navbar-nav" className={Styles.navCollapse}>
+                <Col xs={{ span: 3, offset: 5 }}
+                     sm={{ span: 3, offset: 5 }}
+                     md={{ span:9, offset: 0}}
+                     lg={{ span:9, offset: 0 }}
+                     className={Styles.navCollapseBox}>
+                    <a aria-controls="navbar-nav-Header" className={Styles.hamburgerMenu} onClick={() => setShowCollapse(true)}>
+                        <img src={HamburgerMenu} />
+                    </a>
+
+                    <section className={Styles.navLeftMenu}>
                         <ul className={Styles.navLeft}>
                             <li className={Styles.navItem}><Link to="/">Home</Link></li>
                             <li className={Styles.navItem}><Link to="/about">About</Link></li>
@@ -134,7 +144,8 @@ const Header = () => {
                             <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
                             <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
                         </ul>
-                    </Navbar.Collapse>
+                    </section>
+
                     <section >
                         <ul className={Styles.navRight}>
                             <li><Link to='/products'><img src={Shop} /></Link></li>
@@ -142,6 +153,23 @@ const Header = () => {
                     </section>
                 </Col>
             </Navbar>
+
+            <Modal id="navbar-nav-Header" className={Styles.navCollapse} show={showCollapse} onHide={() => setShowCollapse(false)} aria-labelledby="Collapse-Box-Header">
+                    <ul className={Styles.CollapseBox} id="Collapse-Box-Header">
+                        <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                        <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                        <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                            <ul className={Styles.subMenu}>
+                                <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
+                                <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
+                                <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
+                            </ul>
+                        </li>
+                        <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                        <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                        <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
+                    </ul>
+            </Modal>
 
             {/* <!---------------------  Main Header ------------------> */}
             <Row className={Styles.headerMain}>
