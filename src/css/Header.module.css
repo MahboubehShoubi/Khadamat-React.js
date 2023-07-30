@@ -109,7 +109,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 .navLeft{
@@ -361,18 +361,29 @@
         height: fit-content;
         top: 150px;
         left: 10%;
-        padding: 20px 15px 40px;
+        padding: 10px 15px 20px;
         background-color: var(--black-2);
         border: 3px solid white;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CollapseHeader{
+        background-color: var(--black-2);
+    }
+
+    .CollapseHeader img{
+        width: 100px;
     }
 
     .CollapseBox{
         list-style: none;
         display: flex;
         flex-direction: column;
+        row-gap: 10px;
         background-color: var(--black-2);
         margin: 0;
-        padding: 0;
+        padding:10px 0;
     }
 
     .navLeft a {

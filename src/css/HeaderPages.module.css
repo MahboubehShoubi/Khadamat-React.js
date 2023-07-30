@@ -306,16 +306,25 @@
         width: 80%;
         left: 10%;
         height: fit-content;
-        padding: 20px 15px 40px;
+        padding: 10px 15px 20px;
         top: 160px;
+    }
+
+    .CollapseHeader{
+        background-color: var(--black-2);
+    }
+
+    .CollapseHeader img{
+        width: 100px;
     }
 
     .CollapseBox{
         display:flex ;
         flex-direction: column;
+        row-gap: 10px;
         list-style: none;
         margin: 0;
-        padding: 0;
+        padding:10px 0;
         background-color: var(--black-2);
     }
 

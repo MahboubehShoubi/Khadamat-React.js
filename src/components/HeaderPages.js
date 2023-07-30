@@ -162,6 +162,9 @@ const HeaderPages = (props) => {
             </Navbar>
 
             <Modal id="navbar-nav-headerPage" className={Styles.navCollapse} show={showCollapse} onHide={() => setShowCollapse(false)} aria-labelledby="Collapse-Box-HeaderPage">
+                <Modal.Header className={Styles.CollapseHeader}>
+                    <img src={Logo2}/>
+                </Modal.Header>
                 <ul className={Styles.CollapseBox} id="Collapse-Box-HeaderPage">
                     <li className={Styles.navItem}><Link to="/">Home</Link></li>
                     <li className={Styles.navItem}><Link to="/about">About</Link></li>

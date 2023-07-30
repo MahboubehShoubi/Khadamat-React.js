@@ -7,6 +7,7 @@ import Col from "react-bootstrap/Col";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
+import CloseButton from 'react-bootstrap/CloseButton';
 
 
 //CSS
@@ -154,21 +155,27 @@ const Header = () => {
                 </Col>
             </Navbar>
 
-            <Modal id="navbar-nav-Header" className={Styles.navCollapse} show={showCollapse} onHide={() => setShowCollapse(false)} aria-labelledby="Collapse-Box-Header">
-                    <ul className={Styles.CollapseBox} id="Collapse-Box-Header">
-                        <li className={Styles.navItem}><Link to="/">Home</Link></li>
-                        <li className={Styles.navItem}><Link to="/about">About</Link></li>
-                        <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
-                            <ul className={Styles.subMenu}>
-                                <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
-                                <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
-                                <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
-                            </ul>
-                        </li>
-                        <li className={Styles.navItem}><Link to="/project">Works</Link></li>
-                        <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
-                        <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
-                    </ul>
+            <Modal id="navbar-nav-Header" className={Styles.navCollapse}
+                   show={showCollapse}
+                   onHide={() => setShowCollapse(false)}
+                   aria-labelledby="Collapse-Box-Header" >
+                <Modal.Header className={Styles.CollapseHeader}>
+                    <img src={Logo}/>
+                </Modal.Header>
+                <ul className={Styles.CollapseBox} id="Collapse-Box-Header">
+                    <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                    <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                    <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                        <ul className={Styles.subMenu}>
+                            <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
+                            <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
+                            <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
+                        </ul>
+                    </li>
+                    <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                    <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                    <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
+                </ul>
             </Modal>
 
             {/* <!---------------------  Main Header ------------------> */}
