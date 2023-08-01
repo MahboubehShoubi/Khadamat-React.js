@@ -1,17 +1,12 @@
-
 .headerContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 50px;
-    height: fit-content;
+    margin-bottom: 80px;
 }
 .headerTop{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 20px 60px 20px 170px;
 }
 
@@ -80,44 +75,41 @@
 /*---------------- NAVBAR --------------*/
 .navbar{
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+    height: fit-content;
     background-color: var(--black-2);
-    padding: 20px 100px;
+    padding: 15px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo{
+    width: 25%;
 }
 
 .logo img{
     width: 150px;
-    margin-top: -30px;
-}
-
-.navCollapseBox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    column-gap: 50px;
 }
 
 .hamburgerMenu{
     display: none;
 }
 
-
-.navCollapse{
+.navMenu{
+    width: 75%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    /*margin: 0 auto;*/
 }
 
-.navLeft{
+.navLeftMenu{
     display: flex;
     list-style: none;
     column-gap: 40px;
-    padding: 0;
-    margin: 0;
+}
+
+.navItem{
+    position: relative;
 }
 
 .navItem a{
@@ -128,10 +120,6 @@
 
 .navItem a:hover{
     color: var(--orange);
-}
-
-.navItem{
-    position: relative;
 }
 
 .subMenu{
@@ -257,19 +245,28 @@
 @media only screen and (max-width: 576px) {
 
     .headerContainer{
-        margin-bottom: 100px;
+        margin-bottom: 120px;
     }
     .headerTop{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 10px 20px;
         row-gap: 10px;
-        align-items: flex-start;
     }
     .communication{
-        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .item1 , .item2 {
         align-items: flex-start;
+    }
+    .item3 {
+        display: none;
     }
 
     .icofontEmail , .icofontMap{
@@ -284,9 +281,6 @@
     .itemRightText :nth-child(2){
         font-size: 8px;
     }
-    .item3 {
-        display: none;
-    }
 
     .getQuote a{
         padding: 5px 20px;
@@ -295,11 +289,9 @@
     }
 
     .modalBox{
-        width: 70%;
-        height: 80vh;
-        margin-left: 15%;
+        width: 80%;
+        left: 10%;
     }
-
 
     .modalHeader{
         padding: 10px 20px;
@@ -328,19 +320,25 @@
 
     .navbar{
         padding: 10px 20px;
-        align-items: flex-end;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+
+    log{
+        width: 50%;
     }
 
     .logo img{
         width: 120px;
     }
 
-    .navCollapseBox{
+    .navMenu{
+        width: 50%;
         display: flex;
-        flex-direction: row-reverse;
-        justify-content:space-around;
+        justify-content: flex-end;
         align-items: baseline;
-        column-gap: 15px;
+        column-gap: 10px;
     }
 
     .hamburgerMenu{
@@ -352,20 +350,18 @@
         width: 30px;
     }
 
-    .navLeftMenu{
+    .navLeft{
         display: none;
     }
 
     .navCollapse{
-        width: 80%;
-        height: fit-content;
-        top: 150px;
-        left: 10%;
-        padding: 10px 15px 20px;
         background-color: var(--black-2);
-        border: 3px solid white;
-        display: flex;
-        flex-direction: column;
+        border:3px solid white;
+        width: 80%;
+        left: 10%;
+        height: fit-content;
+        padding: 10px 20px;
+        top: 165px;
     }
 
     .CollapseHeader{
@@ -377,18 +373,14 @@
     }
 
     .CollapseBox{
-        list-style: none;
-        display: flex;
+        display:flex ;
         flex-direction: column;
         row-gap: 10px;
-        background-color: var(--black-2);
+        list-style: none;
         margin: 0;
         padding:10px 0;
-    }
-
-    .navLeft a {
-        font-size: 10px;
-        color: white;
+        background-color: var(--black-2);
+        font-size: 14px;
     }
 
     .subMenu{
@@ -397,14 +389,6 @@
 
     .navItem:hover>.subMenu {
         display:block;
-    }
-
-
-    .navRight ul{
-        column-gap: 10px;
-    }
-    .navRight img{
-        width: 23px;
     }
 
 /*----------- Main Header ------*/

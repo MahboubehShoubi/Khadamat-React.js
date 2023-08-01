@@ -94,7 +94,7 @@
     display: none;
 }
 
-.navLeftMenu{
+.navMenu{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -214,11 +214,6 @@
 
 @media only screen and (max-width: 576px) {
     /*----- header Top -----*/
-    .header{
-        padding: 20px 10px;
-        row-gap: 10px;
-        align-items: flex-start;
-    }
 
     .logo{
         display: none;
@@ -261,12 +256,32 @@
     }
 
     .modalBox{
-        width: 90%;
-        left: 5%;
+        width: 80%;
+        left: 10%;
+    }
+
+    .modalHeader{
+        padding: 10px 20px;
     }
 
     .modalHeader img{
        display: none;
+    }
+
+    .modalForm{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        margin-top: 10px;
+    }
+    .inputForm{
+        padding: 5px;
+        font-size: 10px;
+    }
+
+    .btnModal{
+        padding: 5px 10px;
+        font-size: 12px;
     }
 
     .logo2{
@@ -292,11 +307,8 @@
         width: 30px;
     }
 
-    .navCollapse{
-        display: none;
-    }
 
-    .navLeftMenu{
+    .navMenu{
         display: none;
     }
 
@@ -306,7 +318,7 @@
         width: 80%;
         left: 10%;
         height: fit-content;
-        padding: 10px 15px 20px;
+        padding: 10px 20px;
         top: 160px;
     }
 
@@ -322,10 +334,32 @@
         display:flex ;
         flex-direction: column;
         row-gap: 10px;
-        list-style: none;
         margin: 0;
         padding:10px 0;
         background-color: var(--black-2);
+    }
+
+    .CollapseBoxLeft{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        list-style: none;
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .CollapseBoxRight{
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 12px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .CollapseBoxRight img{
+        width: 16px;
     }
 
     .subMenu{
@@ -335,8 +369,6 @@
     .navItem:hover>.subMenu {
         display:block;
     }
-
-
 
 /*---------- Main Header --------*/
 

@@ -106,17 +106,17 @@ const HeaderPages = (props) => {
                 </Modal.Header>
 
                 <Modal.Body>
-                    <Form>
-                        <Form.Control type="text" placeholder="Your Name *" autoFocus/>
-                        <Form.Control type="email" placeholder="name@example.com" />
-                        <Form.Control type="tel" placeholder="Your Phone Number *" />
-                        <Form.Control as="textarea" rows={3} placeholder="Your Subject" />
+                    <Form className={Styles.modalForm}>
+                        <Form.Control className={Styles.inputForm} type="text" placeholder="Your Name *" autoFocus/>
+                        <Form.Control className={Styles.inputForm} type="email" placeholder="name@example.com" />
+                        <Form.Control className={Styles.inputForm} type="tel" placeholder="Your Phone Number *" />
+                        <Form.Control className={Styles.inputForm} as="textarea" rows={3} placeholder="Your Subject" />
                     </Form>
                 </Modal.Body>
 
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
-                    <Button variant="primary" onClick={() => setShowModal(false)}>Submit Now</Button>
+                    <Button className={Styles.btnModal} variant="secondary" onClick={() => setShowModal(false)}>Close</Button>
+                    <Button className={Styles.btnModal} variant="primary" onClick={() => setShowModal(false)}>Submit Now</Button>
                 </Modal.Footer>
             </Modal>
 
@@ -130,7 +130,7 @@ const HeaderPages = (props) => {
                 <a aria-controls="navbar-nav-headerPage" className={Styles.hamburgerMenu} onClick={() => setShowCollapse(true)}>
                     <img src={HamburgerMenu} />
                 </a>
-                <section className={Styles.navLeftMenu}>
+                <section className={Styles.navMenu}>
                     <section className={Styles.navLeft}>
                         <ul className={Styles.navLeftMenu}>
                             <li className={Styles.navItem}><Link to="/">Home</Link></li>
@@ -161,24 +161,38 @@ const HeaderPages = (props) => {
                 </section>
             </Navbar>
 
-            <Modal id="navbar-nav-headerPage" className={Styles.navCollapse} show={showCollapse} onHide={() => setShowCollapse(false)} aria-labelledby="Collapse-Box-HeaderPage">
+            <Modal id="navbar-nav-headerPage" className={Styles.navCollapse}
+                   show={showCollapse}
+                   onHide={() => setShowCollapse(false)}
+                   aria-labelledby="Collapse-Box-HeaderPage">
                 <Modal.Header className={Styles.CollapseHeader}>
                     <img src={Logo2}/>
                 </Modal.Header>
-                <ul className={Styles.CollapseBox} id="Collapse-Box-HeaderPage">
-                    <li className={Styles.navItem}><Link to="/">Home</Link></li>
-                    <li className={Styles.navItem}><Link to="/about">About</Link></li>
-                    <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
-                        <ul className={Styles.subMenu}>
-                            <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
-                            <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
-                            <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
-                        </ul>
-                    </li>
-                    <li className={Styles.navItem}><Link to="/project">Works</Link></li>
-                    <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
-                    <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
-                </ul>
+
+                <section className={Styles.CollapseBox} id="Collapse-Box-HeaderPage">
+                    <ul className={Styles.CollapseBoxLeft}>
+                        <li className={Styles.navItem}><Link to="/">Home</Link></li>
+                        <li className={Styles.navItem}><Link to="/about">About</Link></li>
+                        <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
+                            <ul className={Styles.subMenu}>
+                                <li className={Styles.subItem}><Link to="/services/service-01">Service 01</Link></li>
+                                <li className={Styles.subItem}><Link to="/services/service-02">Service 02</Link></li>
+                                <li className={Styles.subItem}><Link to="/services/service-03">Service 03</Link></li>
+                            </ul>
+                        </li>
+                        <li className={Styles.navItem}><Link to="/project">Works</Link></li>
+                        <li className={Styles.navItem}><Link to="/products">Shop</Link></li>
+                        <li className={Styles.navItem}><Link to="/contact">Contact</Link></li>
+                    </ul>
+
+                    <ul className={Styles.CollapseBoxRight}>
+                        <li><a href="#"><img src={FaceBook} /></a></li>
+                        <li><a href="#"><img src={twitter} /></a></li>
+                        <li><a href="#"><img src={GooglePlus} /></a></li>
+                        <li><a href="#"><img src={Youtube} /></a></li>
+                        <li><a href="#"><img src={Search} /></a></li>
+                    </ul>
+                </section>
             </Modal>
 
             {/* <!---------------------  Main Header ------------------> */}

@@ -33,11 +33,7 @@ const Header = () => {
     const [showCollapse, setShowCollapse] = useState(false);
 
 
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
-
     return (
-
         <Container fluid className={Styles.headerContainer}>
             <Row className={Styles.headerTop}>
                 <Col xs={12} sm={12} md={9} lg={9}>
@@ -118,20 +114,13 @@ const Header = () => {
             {/* ----------------------------- Navbar----------------------------- */}
 
             <Navbar expand="sm" className={Styles.navbar}>
-                <Col xs={4} sm={4} md={3} lg={3} className={Styles.logo}>
+                <Navbar.Brand className={Styles.logo}>
                     <Link to="/main"><img src={Logo} /></Link>
-                </Col>
-                <Col xs={{ span: 3, offset: 5 }}
-                     sm={{ span: 3, offset: 5 }}
-                     md={{ span:9, offset: 0}}
-                     lg={{ span:9, offset: 0 }}
-                     className={Styles.navCollapseBox}>
-                    <a aria-controls="navbar-nav-Header" className={Styles.hamburgerMenu} onClick={() => setShowCollapse(true)}>
-                        <img src={HamburgerMenu} />
-                    </a>
+                </Navbar.Brand>
 
-                    <section className={Styles.navLeftMenu}>
-                        <ul className={Styles.navLeft}>
+                <section className={Styles.navMenu}>
+                    <section className={Styles.navLeft}>
+                        <ul className={Styles.navLeftMenu}>
                             <li className={Styles.navItem}><Link to="/">Home</Link></li>
                             <li className={Styles.navItem}><Link to="/about">About</Link></li>
                             <li className={Styles.navItem}><Link>Services<img src={CaretDown} alt="caretDown icon" className={Styles.caretDownIcon}/></Link>
@@ -147,12 +136,21 @@ const Header = () => {
                         </ul>
                     </section>
 
+
                     <section >
                         <ul className={Styles.navRight}>
                             <li><Link to='/products'><img src={Shop} /></Link></li>
                         </ul>
                     </section>
-                </Col>
+
+                    <a aria-controls="navbar-nav-Header"
+                       className={Styles.hamburgerMenu}
+                       onClick={() => setShowCollapse(true)}>
+                        <img src={HamburgerMenu} />
+                    </a>
+
+                </section>
+
             </Navbar>
 
             <Modal id="navbar-nav-Header" className={Styles.navCollapse}
