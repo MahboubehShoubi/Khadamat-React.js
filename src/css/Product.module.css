@@ -115,7 +115,7 @@
 }
 
 /*----------------- @media --------------*/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
 
     .productBox{
         width: 100%;

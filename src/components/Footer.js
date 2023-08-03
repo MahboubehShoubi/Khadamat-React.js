@@ -8,8 +8,8 @@ import Container from "react-bootstrap/Container";
 import Styles from "../css/Footer.module.css";
 
 //Images
-import background from "../image/background-Image/Architecture-01.png";
-import MapLocation from "../image/map/maps-location.png";
+import background from "../assets/images/background-Image/Architecture-01.png";
+import MapLocation from "../assets/images/map/maps-location.png";
 
 //Icons
 import IconLocation from "../assets/icons/location-pin.svg";

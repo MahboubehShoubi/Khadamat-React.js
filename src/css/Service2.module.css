@@ -56,7 +56,7 @@
 
 /*----------------- Request a Quote  --------------*/
 .requestBox{
-    background-image: url("../image/services/service-02/img/quote-bg.png");
+    background-image: url("../assets/images/services/service-02/img/quote-bg.png");
     background-size: auto;
     background-position: center;
     height: auto;
@@ -111,7 +111,7 @@
 
 
 /*----------------- @media --------------*/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
 
 
     .serviceInfo{

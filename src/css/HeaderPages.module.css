@@ -5,8 +5,8 @@
     align-items: center;
 }
 .headerTop{
-    padding: 20px;
     width: 90%;
+    padding: 20px;
 }
 
 .logo img{
@@ -150,13 +150,13 @@
     margin-left: 4px;
 }
 
+.navRight img{
+    width: 1rem;
+}
+
 .navRight a{
     text-decoration: none;
     color: var(--gray);
-}
-
-.navRight img{
-    width: 1rem;
 }
 
 .navRight a:hover{
@@ -212,7 +212,7 @@
 
 /*------ Media -----*/
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
     /*----- header Top -----*/
 
     .logo{
@@ -255,7 +255,8 @@
         font-size: 10px;
     }
 
-    .modalBox{
+    /*----------modalBox-----------*/
+    .modalBoxHeaderPages{
         width: 80%;
         left: 10%;
     }

@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Styles from "../css/OurServices.module.css";
 
 //images SVG
-import backgroundImage from "../image/background-Image/services-bg-home.png"
+import backgroundImage from "../assets/images/background-Image/services-bg-home.png"
 import CONSTRUCTION from "../assets/icons/CONSTRUCTION.svg";
 import ARCHITECTURE from "../assets/icons/ARCHITECTURE.svg";
 import PLANNING from "../assets/icons/PLANNING.svg";

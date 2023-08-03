@@ -3,11 +3,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 80px;
+    margin-bottom: 100px;
+    position: relative;
 }
+
+.ImgBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: brightness(50%);
+    z-index: -1;
+}
+
+
 .headerTop{
     width: 100%;
-    padding: 20px 60px 20px 170px;
+    padding: 20px 100px;
 }
 
 .communication{
@@ -75,7 +86,6 @@
 /*---------------- NAVBAR --------------*/
 .navbar{
     width: 100%;
-    height: fit-content;
     background-color: var(--black-2);
     padding: 15px 100px;
     display: flex;
@@ -91,10 +101,6 @@
     width: 150px;
 }
 
-.hamburgerMenu{
-    display: none;
-}
-
 .navMenu{
     width: 75%;
     display: flex;
@@ -102,7 +108,7 @@
     align-items: center;
 }
 
-.navLeftMenu{
+.navLeftMenuHeader{
     display: flex;
     list-style: none;
     column-gap: 40px;
@@ -159,26 +165,24 @@
     color: var(--orange);
 }
 
+.hamburgerMenu{
+    display: none;
+}
+
 /*--------------------- main header---------------*/
 
 .headerMain{
     width:100%;
-    background-position:bottom;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content:center;
     flex-direction: column;
     row-gap: 2rem;
+    padding: 50px 0 100px;
 }
 
-.headerMain img{
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    position: absolute;
-    filter: brightness(50%);
-    margin-top: -200px;
-}
+
 
 .headerMainTop{
     display: flex;
@@ -209,7 +213,7 @@
 }
 
 .headerMainButton{
-   display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 20px;
@@ -242,11 +246,13 @@
     background-color:inherit;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
 
     .headerContainer{
-        margin-bottom: 120px;
+        margin-bottom:120px;
+        position: relative;
     }
+
     .headerTop{
         display: flex;
         flex-direction: column;
@@ -288,16 +294,18 @@
         border-radius: 5px;
     }
 
-    .modalBox{
+ /*----------modalBox-----------*/
+    .modalBoxHeader{
         width: 80%;
-        left: 10%;
+        position: absolute;
     }
 
     .modalHeader{
         padding: 10px 20px;
     }
+
     .modalHeader img{
-       display: none;
+        display: none;
     }
 
     .modalForm{
@@ -350,8 +358,16 @@
         width: 30px;
     }
 
-    .navLeft{
+    .navLeftHeader{
         display: none;
+    }
+
+    .subMenu{
+        display: none;
+    }
+
+    .navItem:hover>.subMenu {
+        display:block;
     }
 
     .navCollapse{
@@ -381,14 +397,6 @@
         padding:10px 0;
         background-color: var(--black-2);
         font-size: 14px;
-    }
-
-    .subMenu{
-        display: none;
-    }
-
-    .navItem:hover>.subMenu {
-        display:block;
     }
 
 /*----------- Main Header ------*/

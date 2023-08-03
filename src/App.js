@@ -8,7 +8,6 @@ import Contact from "./components/Contact";
 import About from "./components/About";
 import Store from './components/Store';
 import ProductDetail from "./components/ProductDetail";
-import Navbar from './components/Navbar';
 import ShopCart from './components/ShopCart';
 import Works from "./components/Works";
 import Service1 from "./components/Service1";

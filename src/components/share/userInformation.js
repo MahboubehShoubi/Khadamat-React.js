@@ -1,8 +1,8 @@
 
 //Images
-import user1 from "../../image/User/testimonial-1.png";
-import user2 from "../../image/User/testimonial-2.png";
-import user3 from "../../image/User/testimonial-3.png";
+import user1 from "../../assets/images/User/testimonial-1.png";
+import user2 from "../../assets/images/User/testimonial-2.png";
+import user3 from "../../assets/images/User/testimonial-3.png";
 
 
 

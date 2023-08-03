@@ -94,7 +94,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("../image/services/service-01/cool-plumber.png");
+    background-image: url("../assets/images/services/service-01/cool-plumber.png");
     background-position: center;
     background-size: cover;
 }
@@ -107,7 +107,7 @@
 .bgCenter{
     height: 50%;
     width: 60%;
-    background-image: url("../image/services/service-01/cool-plumber.png");
+    background-image: url("../assets/images/services/service-01/cool-plumber.png");
     background-position: center;
     padding: 18px;
     position: absolute;
@@ -166,7 +166,7 @@
 }
 
 /*---------- @media max-width: 576px --------*/
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 400px) {
 
     .container{
         padding-top: 50px;

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
@@ -13,8 +12,8 @@ import Form from 'react-bootstrap/Form';
 import Styles from "../css/HeaderPages.module.css";
 
 //Imags
-import Logo from "../image/logo/khadamat-logo.png";
-import Logo2 from "../image/logo/logo-khadamat.png";
+import Logo from "../assets/images/logo/khadamat-logo.png";
+import Logo2 from "../assets/images/logo/logo-khadamat.png";
 import HamburgerMenu from "../assets/icons/navigation-menu.svg";
 
 
@@ -28,7 +27,7 @@ import Youtube from "../assets/icons/youtube-play.svg";
 import GooglePlus from "../assets/icons/google-plus.svg";
 import Search from "../assets/icons/search.svg";
 import Home from "../assets/icons/home.svg";
-import modalImg from "../image/Images/carpentar-man.png";
+import modalImg from "../assets/images/Images/carpentar-man.png";
 import CaretDown from "../assets/icons/caret-down.svg";
 
 const HeaderPages = (props) => {
@@ -90,7 +89,7 @@ const HeaderPages = (props) => {
                 </Col>
             </Row>
 
-            <Modal className={Styles.modalBox} show={showModal} onHide={() => setShowModal(false)} aria-labelledby="modal-Box">
+            <Modal className={Styles.modalBoxHeaderPages} show={showModal} onHide={() => setShowModal(false)} aria-labelledby="modal-Box">
                 <Modal.Header closeButton className={Styles.modalHeader}>
                     <section>
                         <img src={modalImg} alt="modalImag"/>

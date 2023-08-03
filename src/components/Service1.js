@@ -12,13 +12,13 @@ import Brand from "./Brand";
 import Styles from "../css/Service1.module.css";
 
 //Image
-import construction from "../image/services/service-01/construction-photograph.png";
-import constructionSite from "../image/services/service-01/construction-site-photo.png";
-import shovel from "../image/services/service-01/shovel.png";
-import volvoTruck from "../image/services/service-01/volvo-truck.png";
-import womanEngineer02 from "../image/services/service-01/woman-engineer-2.png";
-import workerUsingPowertool from "../image/services/service-01/worker-using-powertool.png";
-import player from "../image/Images/play.png";
+import construction from "../assets/images/services/service-01/construction-photograph.png";
+import constructionSite from "../assets/images/services/service-01/construction-site-photo.png";
+import shovel from "../assets/images/services/service-01/shovel.png";
+import volvoTruck from "../assets/images/services/service-01/volvo-truck.png";
+import womanEngineer02 from "../assets/images/services/service-01/woman-engineer-2.png";
+import workerUsingPowertool from "../assets/images/services/service-01/worker-using-powertool.png";
+import player from "../assets/images/Images/play.png";
 
 
 //Icons

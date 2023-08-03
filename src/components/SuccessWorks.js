@@ -12,9 +12,9 @@ import CountUp from 'react-countup';
 import Styles from '../css/SuccessWorks.module.css';
 
 //Images
-import ImgBottom from '../image/Images/build-img-one.jpg';
-import ImgTop from '../image/Images/build-img-two.jpg';
-import ImgRight from '../image/Images/since-knock-up.png';
+import ImgBottom from '../assets/images/Images/build-img-one.jpg';
+import ImgTop from '../assets/images/Images/build-img-two.jpg';
+import ImgRight from '../assets/images/Images/since-knock-up.png';
 
 
 

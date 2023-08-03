@@ -5,9 +5,9 @@ import Col from "react-bootstrap/Col";
 
 
 //Image
-import HEXAGON from "../image/brand-logo/brand-logo-4.png";
-import PlusInfinity from "../image/brand-logo/brand-logo-2.png";
-import TranSport from "../image/brand-logo/brand-logo-3-1.png";
+import HEXAGON from "../assets/images/brand-logo/brand-logo-4.png";
+import PlusInfinity from "../assets/images/brand-logo/brand-logo-2.png";
+import TranSport from "../assets/images/brand-logo/brand-logo-3-1.png";
 
 
 //CSS

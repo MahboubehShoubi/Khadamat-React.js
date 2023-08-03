@@ -11,12 +11,12 @@ import Footer from "./Footer";
 import Styles from "../css/Contact.module.css";
 
 //Image
-import MapImage from "../image/map/vt.png";
-import MapImage1 from "../image/map/vt (1).png";
-import MapImage2 from "../image/map/vt (2).png";
-import MapImage3 from "../image/map/vt (3).png";
-import MapImage4 from "../image/map/vt (4).png";
-import MapImage5 from "../image/map/vt (5).png";
+import MapImage from "../assets/images/map/vt.png";
+import MapImage1 from "../assets/images/map/vt (1).png";
+import MapImage2 from "../assets/images/map/vt (2).png";
+import MapImage3 from "../assets/images/map/vt (3).png";
+import MapImage4 from "../assets/images/map/vt (4).png";
+import MapImage5 from "../assets/images/map/vt (5).png";
 
 //Icon
 import Email from "../assets/icons/email.svg";

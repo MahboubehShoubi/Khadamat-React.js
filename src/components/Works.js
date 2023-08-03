@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import {Stack} from "react-bootstrap";
 
 //Component
 import HeaderPages from "./HeaderPages";
@@ -13,17 +14,16 @@ import Footer from "./Footer";
 import Styles from '../css/Works.module.css';
 
 //Images
-import apartment from '../image/works/apartment.png';
-import building from '../image/works/building.png';
-import building2 from '../image/works/building-2.png';
-import casques from '../image/works/casques.png';
-import constructionTruck from '../image/works/construction-truck.png';
-import houseClock from '../image/works/house-clock.png';
-import modernHome from '../image/works/modern-home.png';
-import modernHouse from '../image/works/modern-house.png';
-import scaniaTruck from '../image/works/scania-truck.png';
-import volvoTruck02 from '../image/works/volvo-truck-02.png';
-import {Stack} from "react-bootstrap";
+import apartment from '../assets/images/works/apartment.png';
+import building from '../assets/images/works/building.png';
+import building2 from '../assets/images/works/building-2.png';
+import casques from '../assets/images/works/casques.png';
+import constructionTruck from '../assets/images/works/construction-truck.png';
+import houseClock from '../assets/images/works/house-clock.png';
+import modernHome from '../assets/images/works/modern-home.png';
+import modernHouse from '../assets/images/works/modern-house.png';
+import scaniaTruck from '../assets/images/works/scania-truck.png';
+import volvoTruck02 from '../assets/images/works/volvo-truck-02.png';
 
 
 

@@ -7,7 +7,7 @@ import Col from "react-bootstrap/Col";
 import Styles from "../css/QuestionSection.module.css";
 
 //Image
-import backgroundImage from "../image/Images/consultants.png";
+import backgroundImage from "../assets/images/Images/consultants.png";
 
 const QuestionSection = () => {
     return (

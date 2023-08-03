@@ -14,12 +14,12 @@ import OurTeam from "./OurTeam";
 import Styles from "../css/Service3.module.css";
 
 //image
-import service3_1 from '../image/services/servive-03/img/services-1.png';
-import service3_2 from '../image/services/servive-03/img/services-2.png';
-import service3_3 from '../image/services/servive-03/img/services-3.png';
-import service3_4 from '../image/services/servive-03/img/services-4.png';
-import service3_5 from '../image/services/servive-03/img/services-5.png';
-import service3_6 from '../image/services/servive-03/img/services-1.png';
+import service3_1 from '../assets/images/services/service-03/img/services-1.png';
+import service3_2 from '../assets/images/services/service-03/img/services-2.png';
+import service3_3 from '../assets/images/services/service-03/img/services-3.png';
+import service3_4 from '../assets/images/services/service-03/img/services-4.png';
+import service3_5 from '../assets/images/services/service-03/img/services-5.png';
+import service3_6 from '../assets/images/services/service-03/img/services-1.png';
 
 
 const Service3 = () => {

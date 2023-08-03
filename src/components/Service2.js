@@ -14,15 +14,15 @@ import Brand from "./Brand";
 import Styles from "../css/Service2.module.css";
 
 //Icons
-import Service2_1 from "../image/services/service-02/icon/servive2 (1).svg";
-import Service2_2 from "../image/services/service-02/icon/servive2 (2).svg";
-import Service2_3 from "../image/services/service-02/icon/servive2 (3).svg";
-import Service2_4 from "../image/services/service-02/icon/servive2 (4).svg";
-import Service2_5 from "../image/services/service-02/icon/servive2 (5).svg";
-import Service2_6 from "../image/services/service-02/icon/servive2 (6).svg";
-import Service2_7 from "../image/services/service-02/icon/servive2 (7).svg";
-import Service2_8 from "../image/services/service-02/icon/servive2 (8).svg";
-import Service2_9 from "../image/services/service-02/icon/servive2 (9).svg";
+import Service2_1 from "../assets/images/services/service-02/icon/servive2 (1).svg";
+import Service2_2 from "../assets/images/services/service-02/icon/servive2 (2).svg";
+import Service2_3 from "../assets/images/services/service-02/icon/servive2 (3).svg";
+import Service2_4 from "../assets/images/services/service-02/icon/servive2 (4).svg";
+import Service2_5 from "../assets/images/services/service-02/icon/servive2 (5).svg";
+import Service2_6 from "../assets/images/services/service-02/icon/servive2 (6).svg";
+import Service2_7 from "../assets/images/services/service-02/icon/servive2 (7).svg";
+import Service2_8 from "../assets/images/services/service-02/icon/servive2 (8).svg";
+import Service2_9 from "../assets/images/services/service-02/icon/servive2 (9).svg";
 
 
 
