@@ -1,0 +1,14 @@
+.mainContainer{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 400px) {
+    .mainContainer{
+        padding-right: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+

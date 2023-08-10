@@ -33,6 +33,7 @@ const Product = ({productData}) => {
                     <div className={Styles.btnHandler}>
                         {quantitycount(state , productData.id) > 1 && <button className={Styles.btnDecrease} onClick={() => dispatch({type:"DECREASE" , payload:productData})}>-</button> }
                         {quantitycount(state , productData.id) === 1 && <button className={Styles.delProduct} onClick={() => dispatch({type:"REMOVE_ITEM" , payload:productData})}><img src={RemoveIcon} /></button> }
+                        {quantitycount(state , productData.id) > 0 && <span className={Styles.quantityCount}>{quantitycount(state, productData.id)}</span>}
                         {
                             isInCart(state , productData.id) ?
                                 <button className={Styles.btnIncrease} onClick={() => dispatch({type : "INCREASE" , payload : productData})}>+</button> :

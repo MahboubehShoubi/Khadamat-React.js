@@ -1,4 +1,6 @@
 import React from 'react';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 
 //Components
 import Header from "./Header";
@@ -8,8 +10,8 @@ import OurTeam from "./OurTeam";
 import QuestionSection from "./QuestionSection";
 import Footer from "./Footer";
 
-
-
+//CSS
+import Styles from "../css/Main.module.css";
 
 
 const Main = () => {

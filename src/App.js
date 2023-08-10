@@ -1,5 +1,3 @@
-import './App.css';
-
 import { Route , Routes , Navigate } from 'react-router-dom';
 
 //components
@@ -31,7 +29,7 @@ function App() {
                     <Route path='/main' element={<Main />} />
                     <Route path='/contact' element={<Contact />} />
                     <Route path='/about' element={<About />} />
-                    <Route path='/*' element={<Navigate to='/main' />} />
+                    <Route path='/*' element={<Navigate to='/main'/>} />
                     <Route path='/cart' element={<ShopCart />} />
                     <Route path='/products' element={<Store />} />
                     <Route path='/products/:id' element={<ProductDetail />} />

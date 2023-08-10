@@ -1,5 +1,9 @@
 import React , { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+
+
 
 //Context
 import { CartContext } from '../context/CartContextProvider';
@@ -14,13 +18,15 @@ const Navbar = () => {
 
     const {state} = useContext(CartContext);
     return (
+        <Container fluid className={Styles.navbarContainer}>
+            <Link to="/cart" className={Styles.navbarMain}>
+                <img src={ShopIcon} alt='shop' />
+                {
+                    state.itemsCounter > 0 && <span className={Styles.itemsCounter}>{state.itemsCounter}</span>
+                }
+            </Link>
+        </Container>
 
-            <div>
-                <div className={Styles.navbarContainer}>
-                    <Link to="/cart" ><img src={ShopIcon} alt='shop' /></Link>
-                    <span>{state.itemsCounter}</span>
-                </div>
-            </div>
 
     );
 };

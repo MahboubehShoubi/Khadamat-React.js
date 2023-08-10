@@ -21,7 +21,7 @@ import modalImg from "../assets/images/Images/carpentar-man.png";
 import FindUs from "../assets/icons/map.svg";
 import Email from "../assets/icons/email.svg";
 import Call from "../assets/icons/ui-call.svg";
-import Shop from "../assets/icons/shop.svg";
+import Shop from "../assets/icons/shop2.svg";
 import CaretDown from "../assets/icons/caret-down.svg";
 import HamburgerMenu from "../assets/icons/navigation-menu.svg"
 

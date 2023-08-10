@@ -18,7 +18,7 @@ const Store = () => {
     const products = useContext(ProductsContext);
     return (
         <>
-            <HeaderPages part1="OUR" part2="PRODUCTS" part3="OUR PRODUCT" />
+            <HeaderPages part1="OUR" part2="STORE" part3="Shopping" />
             <Navbar />
             <Container fluid className={Styles.container}>
                 <div className={Styles.storeContainer}>

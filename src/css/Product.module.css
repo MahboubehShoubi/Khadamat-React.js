@@ -19,6 +19,9 @@
 .productDetailBox{
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 .productHeader h3{
@@ -30,7 +33,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
 }
 .productDetail p{
     width: 50%;
@@ -56,7 +59,8 @@
 
 .productHandler{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -64,38 +68,43 @@
 
 .btnHandler{
     display: flex;
-    justify-content: space-between;
+    justify-content:space-around;
     align-items: center;
-    column-gap: 5px;
-    width: 100%;
+    width: 75%;
+    border: 1px solid #c9c8c8;
+    box-shadow: 2px 2px 10px #c9c8c8 , -2px -2px 10px #c9c8c8;
 }
 
-.btnHandler button{
-    font-size: 13px;
-    width: 100%;
-    padding:5px 15px;
-
+.quantityCount{
+    width: fit-content;
+    padding: 5px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: orange;
 }
 
 .btnDecrease{
-    background-color: #d7d723;
-    border: 2px solid #d7d723;
+    width: fit-content;
     cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 25px;
 }
 
 .delProduct{
-    background-color: #f64b4b;
-    border: 2px solid #f64b4b;
     cursor: pointer;
+    border: none;
+    background-color: inherit;
 }
 .delProduct img{
-    width: 13px;
+    width: 18px;
 }
 
 .btnIncrease{
-    background-color: #8FBC32;
-    border: 2px solid #8FBC32 ;
     cursor: pointer;
+    border: none;
+    background-color: inherit;
+    font-size: 20px;
 }
 
 .addProduct{
@@ -106,6 +115,7 @@
     transition: all 1s;
     cursor: pointer;
     width: 100%;
+    font-size: 13px;
 }
 
 .addProduct:hover{

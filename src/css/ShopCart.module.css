@@ -12,6 +12,22 @@
     row-gap: 15px;
 }
 
+.linkToStore{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: all 500ms;
+    width: fit-content;
+}
+
+.linkToStore img{
+    width: 20px;
+}
+
+.linkToStore:hover{
+    color: var(--orange);
+}
+
 .productHandler{
     width: 25%;
     padding: 10px 20px;
@@ -48,24 +64,25 @@
 .checkout{
     padding: 8px 25px;
     font-size: 14px;
-    color: white;
-    background-color:var(--green);
-    border: 2px solid var(--green) ;
+    background-color:black;
+    /*border: 2px solid var(--green) ;*/
     transition: all 800ms;
     border-radius: 3px;
+    color: var(--orange);
 }
 
 .checkout:hover{
     background-color:white;
     color: var(--green);
+    font-weight: bold;
 }
 
 .clear{
     padding: 8px 25px;
     font-size: 14px;
-    color: white;
-    background-color: #d90707;
-    border: 2px solid #d90707;
+    color: black;
+    background-color: var(--orange);
+    /*border: 2px solid #d90707;*/
     transition: all 800ms;
     border-radius: 3px;
 }
@@ -73,6 +90,7 @@
 .clear:hover{
     color:#d90707;
     background-color:white;
+    font-weight: bold;
 }
 
 .backToShop h4 {
