@@ -1,11 +1,12 @@
 /*@import url("https://fonts.googleapis.com/css?family=Roboto");*/
 
-*{
+html,body,*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
 
 :root{
   --green:#8FBC32;
